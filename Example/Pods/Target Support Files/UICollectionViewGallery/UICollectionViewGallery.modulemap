@@ -1,0 +1,6 @@
+framework module UICollectionViewGallery {
+  umbrella header "UICollectionViewGallery-umbrella.h"
+
+  export *
+  module * { export * }
+}

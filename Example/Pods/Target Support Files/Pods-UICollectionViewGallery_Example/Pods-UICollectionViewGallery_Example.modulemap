@@ -1,0 +1,6 @@
+framework module Pods_UICollectionViewGallery_Example {
+  umbrella header "Pods-UICollectionViewGallery_Example-umbrella.h"
+
+  export *
+  module * { export * }
+}
