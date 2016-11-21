@@ -9,7 +9,7 @@ EXTERNAL SOURCES:
     :path: "../"
 
 SPEC CHECKSUMS:
-  UICollectionViewGallery: 40e063369eebe0a50f10f6454b65b0ec0486b376
+  UICollectionViewGallery: f2ce0d46b70993563874ceb31d492d9ad29c79f7
 
 PODFILE CHECKSUM: 572fafc0e2bda3567b1ab3e4c8e4429d4c0eaeee
 

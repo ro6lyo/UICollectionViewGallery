@@ -11,8 +11,13 @@
 		37C23804C0ACD9FB0B58790A69076B5E /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CBB3DE36805AF21409EC968A9691732F /* Foundation.framework */; };
 		651609B7E0C9ABF7B48F6CF25618F833 /* Pods-UICollectionViewGallery_Tests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 0A8A7878D19E37EA79F6B93ADA7FA592 /* Pods-UICollectionViewGallery_Tests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		7D8ED05F7938F63A2F92012649C6C044 /* Pods-UICollectionViewGallery_Example-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 6EF6F36B3A75E5D5B624BC2A75C9ABDE /* Pods-UICollectionViewGallery_Example-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		91FEB87AEB4449F2200458277EA59C4B /* ReplaceMe.swift in Sources */ = {isa = PBXBuildFile; fileRef = 491CFF470050F2664B43DC9F0CC528FB /* ReplaceMe.swift */; };
+		91FEB87AEB4449F2200458277EA59C4B /* ScaleCollectionViews.swift in Sources */ = {isa = PBXBuildFile; fileRef = 491CFF470050F2664B43DC9F0CC528FB /* ScaleCollectionViews.swift */; };
 		9607E8AAFD50BE63151325A3AB1B93F2 /* Pods-UICollectionViewGallery_Example-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 10CC324E34EC99A765033B0710CFB658 /* Pods-UICollectionViewGallery_Example-dummy.m */; };
+		A12210781DE18DD500FDE808 /* VerticalLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = A12210771DE18DD500FDE808 /* VerticalLayout.swift */; };
+		A12D77861DE111DD0023ED31 /* HorizontalLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = A12D77851DE111DD0023ED31 /* HorizontalLayout.swift */; };
+		A19558AC1DE2FA5500A6E220 /* InfiniteScrollingLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = A19558AB1DE2FA5500A6E220 /* InfiniteScrollingLayout.swift */; };
+		A19558B01DE319F400A6E220 /* InfiniteHorizontalLayout.h in Headers */ = {isa = PBXBuildFile; fileRef = A19558AE1DE319F400A6E220 /* InfiniteHorizontalLayout.h */; };
+		A19558B11DE319F400A6E220 /* InfiniteHorizontalLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = A19558AF1DE319F400A6E220 /* InfiniteHorizontalLayout.m */; };
 		A1CD2A983CF706F68652784124E61734 /* UICollectionViewGallery-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 968CD4940404F630C201E92943328768 /* UICollectionViewGallery-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		CB80D78C86359C1FC28CDBF2055895B7 /* Pods-UICollectionViewGallery_Tests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 9D824D49D935C295DA66F0AD10E4E7E9 /* Pods-UICollectionViewGallery_Tests-dummy.m */; };
 		DF2AA8746A202DE914A7B766A842A604 /* UICollectionViewGallery-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = FB55CD62B3767FF4513999C56D2942C4 /* UICollectionViewGallery-dummy.m */; };
@@ -38,7 +43,7 @@
 		3B39E10F5541B58E6C99B3807B42454B /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		437E832B65FCD13860D2B3AF9AC01953 /* Pods-UICollectionViewGallery_Tests-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-UICollectionViewGallery_Tests-frameworks.sh"; sourceTree = "<group>"; };
 		4624DA83A52D516338EDA5E0A2F06D1D /* Pods-UICollectionViewGallery_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-UICollectionViewGallery_Tests.debug.xcconfig"; sourceTree = "<group>"; };
-		491CFF470050F2664B43DC9F0CC528FB /* ReplaceMe.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = ReplaceMe.swift; sourceTree = "<group>"; };
+		491CFF470050F2664B43DC9F0CC528FB /* ScaleCollectionViews.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = ScaleCollectionViews.swift; sourceTree = "<group>"; };
 		4B4B39ADD546E83E34F463B0F37C9CA6 /* Pods-UICollectionViewGallery_Tests-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-UICollectionViewGallery_Tests-resources.sh"; sourceTree = "<group>"; };
 		50C0E74ACD13E91D320653BF152EBAA0 /* Pods-UICollectionViewGallery_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-UICollectionViewGallery_Example.release.xcconfig"; sourceTree = "<group>"; };
 		50CF152C6BB52D2660EF0C9A3437C704 /* Pods_UICollectionViewGallery_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_UICollectionViewGallery_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -52,6 +57,11 @@
 		93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		968CD4940404F630C201E92943328768 /* UICollectionViewGallery-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "UICollectionViewGallery-umbrella.h"; sourceTree = "<group>"; };
 		9D824D49D935C295DA66F0AD10E4E7E9 /* Pods-UICollectionViewGallery_Tests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-UICollectionViewGallery_Tests-dummy.m"; sourceTree = "<group>"; };
+		A12210771DE18DD500FDE808 /* VerticalLayout.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VerticalLayout.swift; sourceTree = "<group>"; };
+		A12D77851DE111DD0023ED31 /* HorizontalLayout.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HorizontalLayout.swift; sourceTree = "<group>"; };
+		A19558AB1DE2FA5500A6E220 /* InfiniteScrollingLayout.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InfiniteScrollingLayout.swift; sourceTree = "<group>"; };
+		A19558AE1DE319F400A6E220 /* InfiniteHorizontalLayout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = InfiniteHorizontalLayout.h; sourceTree = "<group>"; };
+		A19558AF1DE319F400A6E220 /* InfiniteHorizontalLayout.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = InfiniteHorizontalLayout.m; sourceTree = "<group>"; };
 		B4C866B55B215FE17284413ECF992C37 /* UICollectionViewGallery.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = UICollectionViewGallery.xcconfig; sourceTree = "<group>"; };
 		B5EF892FC78BCB43E8590C773F62C36A /* Pods-UICollectionViewGallery_Example.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = "Pods-UICollectionViewGallery_Example.modulemap"; sourceTree = "<group>"; };
 		B788D23EC0B1948CF42CF835B9E5488A /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -196,6 +206,15 @@
 			name = "Development Pods";
 			sourceTree = "<group>";
 		};
+		A19558AD1DE319F400A6E220 /* InfiniteHorizontalLayout */ = {
+			isa = PBXGroup;
+			children = (
+				A19558AE1DE319F400A6E220 /* InfiniteHorizontalLayout.h */,
+				A19558AF1DE319F400A6E220 /* InfiniteHorizontalLayout.m */,
+			);
+			path = InfiniteHorizontalLayout;
+			sourceTree = "<group>";
+		};
 		BC3CA7F9E30CC8F7E2DD044DD34432FC /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -217,7 +236,11 @@
 		FC3B2E63E0480CAF5E964DA08D09003B /* Classes */ = {
 			isa = PBXGroup;
 			children = (
-				491CFF470050F2664B43DC9F0CC528FB /* ReplaceMe.swift */,
+				A19558AD1DE319F400A6E220 /* InfiniteHorizontalLayout */,
+				491CFF470050F2664B43DC9F0CC528FB /* ScaleCollectionViews.swift */,
+				A12D77851DE111DD0023ED31 /* HorizontalLayout.swift */,
+				A12210771DE18DD500FDE808 /* VerticalLayout.swift */,
+				A19558AB1DE2FA5500A6E220 /* InfiniteScrollingLayout.swift */,
 			);
 			path = Classes;
 			sourceTree = "<group>";
@@ -245,6 +268,7 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A19558B01DE319F400A6E220 /* InfiniteHorizontalLayout.h in Headers */,
 				A1CD2A983CF706F68652784124E61734 /* UICollectionViewGallery-umbrella.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -320,7 +344,9 @@
 						LastSwiftMigration = 0810;
 					};
 					B8EBD8F21C99833EA1BB0DC067E5482E = {
+						DevelopmentTeam = UG327W9DM7;
 						LastSwiftMigration = 0810;
+						ProvisioningStyle = Automatic;
 					};
 				};
 			};
@@ -348,8 +374,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				91FEB87AEB4449F2200458277EA59C4B /* ReplaceMe.swift in Sources */,
+				91FEB87AEB4449F2200458277EA59C4B /* ScaleCollectionViews.swift in Sources */,
+				A19558AC1DE2FA5500A6E220 /* InfiniteScrollingLayout.swift in Sources */,
+				A12D77861DE111DD0023ED31 /* HorizontalLayout.swift in Sources */,
 				DF2AA8746A202DE914A7B766A842A604 /* UICollectionViewGallery-dummy.m in Sources */,
+				A12210781DE18DD500FDE808 /* VerticalLayout.swift in Sources */,
+				A19558B11DE319F400A6E220 /* InfiniteHorizontalLayout.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -381,9 +411,9 @@
 /* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
-		0E581853AF41AAD0299B86A1813A1F74 /* Release */ = {
+		03CC215211E0AC643FBB95C1D8B1F244 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 50C0E74ACD13E91D320653BF152EBAA0 /* Pods-UICollectionViewGallery_Example.release.xcconfig */;
+			baseConfigurationReference = F130DB41B10AC78B9B2DBF1DD58CD645 /* Pods-UICollectionViewGallery_Tests.release.xcconfig */;
 			buildSettings = {
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
@@ -396,119 +426,13 @@
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				GCC_NO_COMMON_BLOCKS = YES;
-				INFOPLIST_FILE = "Target Support Files/Pods-UICollectionViewGallery_Example/Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MACH_O_TYPE = staticlib;
-				MODULEMAP_FILE = "Target Support Files/Pods-UICollectionViewGallery_Example/Pods-UICollectionViewGallery_Example.modulemap";
-				MTL_ENABLE_DEBUG_INFO = NO;
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PODS_ROOT = "$(SRCROOT)";
-				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
-				PRODUCT_NAME = Pods_UICollectionViewGallery_Example;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				SWIFT_VERSION = 3.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Release;
-		};
-		30E752FE643B8A2BD9266372A12B2457 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = B4C866B55B215FE17284413ECF992C37 /* UICollectionViewGallery.xcconfig */;
-			buildSettings = {
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEBUG_INFORMATION_FORMAT = dwarf;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				GCC_NO_COMMON_BLOCKS = YES;
-				GCC_PREFIX_HEADER = "Target Support Files/UICollectionViewGallery/UICollectionViewGallery-prefix.pch";
-				INFOPLIST_FILE = "Target Support Files/UICollectionViewGallery/Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MODULEMAP_FILE = "Target Support Files/UICollectionViewGallery/UICollectionViewGallery.modulemap";
-				MTL_ENABLE_DEBUG_INFO = YES;
-				PRODUCT_NAME = UICollectionViewGallery;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
-				SWIFT_VERSION = 3.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Debug;
-		};
-		457D4AB83E7998E1D8E7FA9011BD3F11 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 8D35D6E427D03F739DAA1144DA902D76 /* Pods-UICollectionViewGallery_Example.debug.xcconfig */;
-			buildSettings = {
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEBUG_INFORMATION_FORMAT = dwarf;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				GCC_NO_COMMON_BLOCKS = YES;
-				INFOPLIST_FILE = "Target Support Files/Pods-UICollectionViewGallery_Example/Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MACH_O_TYPE = staticlib;
-				MODULEMAP_FILE = "Target Support Files/Pods-UICollectionViewGallery_Example/Pods-UICollectionViewGallery_Example.modulemap";
-				MTL_ENABLE_DEBUG_INFO = YES;
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PODS_ROOT = "$(SRCROOT)";
-				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
-				PRODUCT_NAME = Pods_UICollectionViewGallery_Example;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
-				SWIFT_VERSION = 3.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Debug;
-		};
-		7EFF1DBC624D4844E60D2A98A808689D /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 4624DA83A52D516338EDA5E0A2F06D1D /* Pods-UICollectionViewGallery_Tests.debug.xcconfig */;
-			buildSettings = {
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEBUG_INFORMATION_FORMAT = dwarf;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				GCC_NO_COMMON_BLOCKS = YES;
 				INFOPLIST_FILE = "Target Support Files/Pods-UICollectionViewGallery_Tests/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				MACH_O_TYPE = staticlib;
 				MODULEMAP_FILE = "Target Support Files/Pods-UICollectionViewGallery_Tests/Pods-UICollectionViewGallery_Tests.modulemap";
-				MTL_ENABLE_DEBUG_INFO = YES;
+				MTL_ENABLE_DEBUG_INFO = NO;
 				OTHER_LDFLAGS = "";
 				OTHER_LIBTOOLFLAGS = "";
 				PODS_ROOT = "$(SRCROOT)";
@@ -521,81 +445,9 @@
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
 			};
-			name = Debug;
-		};
-		8DED8AD26D381A6ACFF202E5217EC498 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_SEARCH_USER_PATHS = NO;
-				CLANG_ANALYZER_NONNULL = YES;
-				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
-				CLANG_CXX_LIBRARY = "libc++";
-				CLANG_ENABLE_MODULES = YES;
-				CLANG_ENABLE_OBJC_ARC = YES;
-				CLANG_WARN_BOOL_CONVERSION = YES;
-				CLANG_WARN_CONSTANT_CONVERSION = YES;
-				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES;
-				CLANG_WARN_EMPTY_BODY = YES;
-				CLANG_WARN_ENUM_CONVERSION = YES;
-				CLANG_WARN_INT_CONVERSION = YES;
-				CLANG_WARN_OBJC_ROOT_CLASS = YES;
-				CLANG_WARN_UNREACHABLE_CODE = YES;
-				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				CODE_SIGNING_REQUIRED = NO;
-				COPY_PHASE_STRIP = YES;
-				ENABLE_NS_ASSERTIONS = NO;
-				GCC_C_LANGUAGE_STANDARD = gnu99;
-				GCC_PREPROCESSOR_DEFINITIONS = (
-					"POD_CONFIGURATION_RELEASE=1",
-					"$(inherited)",
-				);
-				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
-				GCC_WARN_ABOUT_RETURN_TYPE = YES;
-				GCC_WARN_UNDECLARED_SELECTOR = YES;
-				GCC_WARN_UNINITIALIZED_AUTOS = YES;
-				GCC_WARN_UNUSED_FUNCTION = YES;
-				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
-				PROVISIONING_PROFILE_SPECIFIER = NO_SIGNING/;
-				STRIP_INSTALLED_PRODUCT = NO;
-				SYMROOT = "${SRCROOT}/../build";
-				VALIDATE_PRODUCT = YES;
-			};
 			name = Release;
 		};
-		9A3EBCD167E14088EA18311378CADA99 /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = B4C866B55B215FE17284413ECF992C37 /* UICollectionViewGallery.xcconfig */;
-			buildSettings = {
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				GCC_NO_COMMON_BLOCKS = YES;
-				GCC_PREFIX_HEADER = "Target Support Files/UICollectionViewGallery/UICollectionViewGallery-prefix.pch";
-				INFOPLIST_FILE = "Target Support Files/UICollectionViewGallery/Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MODULEMAP_FILE = "Target Support Files/UICollectionViewGallery/UICollectionViewGallery.modulemap";
-				MTL_ENABLE_DEBUG_INFO = NO;
-				PRODUCT_NAME = UICollectionViewGallery;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				SWIFT_VERSION = 3.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Release;
-		};
-		9E1E4E48AF2EAB23169E611BF694090A /* Debug */ = {
+		13E96A645A77DAD1FD4F541F18F5DDBF /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -639,15 +491,15 @@
 			};
 			name = Debug;
 		};
-		9EF5135ECF987D4A04817AF80F861710 /* Release */ = {
+		435DD916D38ABD81C0C30A293A5D074D /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = F130DB41B10AC78B9B2DBF1DD58CD645 /* Pods-UICollectionViewGallery_Tests.release.xcconfig */;
+			baseConfigurationReference = 4624DA83A52D516338EDA5E0A2F06D1D /* Pods-UICollectionViewGallery_Tests.debug.xcconfig */;
 			buildSettings = {
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
 				CURRENT_PROJECT_VERSION = 1;
-				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEBUG_INFORMATION_FORMAT = dwarf;
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
@@ -656,11 +508,11 @@
 				GCC_NO_COMMON_BLOCKS = YES;
 				INFOPLIST_FILE = "Target Support Files/Pods-UICollectionViewGallery_Tests/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				MACH_O_TYPE = staticlib;
 				MODULEMAP_FILE = "Target Support Files/Pods-UICollectionViewGallery_Tests/Pods-UICollectionViewGallery_Tests.modulemap";
-				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_ENABLE_DEBUG_INFO = YES;
 				OTHER_LDFLAGS = "";
 				OTHER_LIBTOOLFLAGS = "";
 				PODS_ROOT = "$(SRCROOT)";
@@ -673,7 +525,193 @@
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
 			};
+			name = Debug;
+		};
+		5DEE9424F593D2F9A285A5A0679C2BA8 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 50C0E74ACD13E91D320653BF152EBAA0 /* Pods-UICollectionViewGallery_Example.release.xcconfig */;
+			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = UG327W9DM7;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				INFOPLIST_FILE = "Target Support Files/Pods-UICollectionViewGallery_Example/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-UICollectionViewGallery_Example/Pods-UICollectionViewGallery_Example.modulemap";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = Pods_UICollectionViewGallery_Example;
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
 			name = Release;
+		};
+		6050CD2236E0634F970E7E93059CCE57 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = B4C866B55B215FE17284413ECF992C37 /* UICollectionViewGallery.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/UICollectionViewGallery/UICollectionViewGallery-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/UICollectionViewGallery/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/UICollectionViewGallery/UICollectionViewGallery.modulemap";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				PRODUCT_NAME = UICollectionViewGallery;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_OBJC_BRIDGING_HEADER = "";
+				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		862AF3139CD84E18D34FAF2F43CD0DA6 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGNING_REQUIRED = NO;
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"POD_CONFIGURATION_RELEASE=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				PROVISIONING_PROFILE_SPECIFIER = NO_SIGNING/;
+				STRIP_INSTALLED_PRODUCT = NO;
+				SYMROOT = "${SRCROOT}/../build";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		A6138F207DEE6BFECA685950B1FA6A30 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = B4C866B55B215FE17284413ECF992C37 /* UICollectionViewGallery.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/UICollectionViewGallery/UICollectionViewGallery-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/UICollectionViewGallery/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/UICollectionViewGallery/UICollectionViewGallery.modulemap";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				PRODUCT_NAME = UICollectionViewGallery;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_OBJC_BRIDGING_HEADER = "";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		FC79EB5282B607CD712F8F3073DE20BE /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 8D35D6E427D03F739DAA1144DA902D76 /* Pods-UICollectionViewGallery_Example.debug.xcconfig */;
+			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = UG327W9DM7;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				INFOPLIST_FILE = "Target Support Files/Pods-UICollectionViewGallery_Example/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-UICollectionViewGallery_Example/Pods-UICollectionViewGallery_Example.modulemap";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = Pods_UICollectionViewGallery_Example;
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
 		};
 /* End XCBuildConfiguration section */
 
@@ -681,8 +719,8 @@
 		1F6AE862709B3DEDD2718FA6CE9D91AE /* Build configuration list for PBXNativeTarget "UICollectionViewGallery" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				30E752FE643B8A2BD9266372A12B2457 /* Debug */,
-				9A3EBCD167E14088EA18311378CADA99 /* Release */,
+				A6138F207DEE6BFECA685950B1FA6A30 /* Debug */,
+				6050CD2236E0634F970E7E93059CCE57 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
@@ -690,8 +728,8 @@
 		2D8E8EC45A3A1A1D94AE762CB5028504 /* Build configuration list for PBXProject "Pods" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				9E1E4E48AF2EAB23169E611BF694090A /* Debug */,
-				8DED8AD26D381A6ACFF202E5217EC498 /* Release */,
+				13E96A645A77DAD1FD4F541F18F5DDBF /* Debug */,
+				862AF3139CD84E18D34FAF2F43CD0DA6 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
@@ -699,8 +737,8 @@
 		BA1A05A31CB2D5BB77B3AE03D9F76ADD /* Build configuration list for PBXNativeTarget "Pods-UICollectionViewGallery_Tests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				7EFF1DBC624D4844E60D2A98A808689D /* Debug */,
-				9EF5135ECF987D4A04817AF80F861710 /* Release */,
+				435DD916D38ABD81C0C30A293A5D074D /* Debug */,
+				03CC215211E0AC643FBB95C1D8B1F244 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
@@ -708,8 +746,8 @@
 		F0F9563B9F8C47ACDD7B05A39D6E45A2 /* Build configuration list for PBXNativeTarget "Pods-UICollectionViewGallery_Example" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				457D4AB83E7998E1D8E7FA9011BD3F11 /* Debug */,
-				0E581853AF41AAD0299B86A1813A1F74 /* Release */,
+				FC79EB5282B607CD712F8F3073DE20BE /* Debug */,
+				5DEE9424F593D2F9A285A5A0679C2BA8 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
