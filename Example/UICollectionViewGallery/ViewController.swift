@@ -11,43 +11,23 @@ import UICollectionViewGallery
 
 class ViewController: UIViewController {
 
-    @IBOutlet weak var collectionView: UICollectionView!
-    @IBOutlet weak var horizontal: UICollectionView!
+    @IBOutlet weak var galleryCollectionView: UICollectionView!
     var stringArray: [String] = ["1", "2", "3", "4", "5", "6", "7", "8", "9", "10"]
-    let verticalLayout = VerticalLinearFlowLayout()
-    var horizontalLayout = LGHorizontalLinearFlowLayout()
+    let verticalLayout = VerticalFlowLayout()
+    var horizontalLayout = HorizontalFlowLayout()
    
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        collectionView.delegate = self
-        collectionView.dataSource = self
-        horizontal.delegate = self
-        horizontal.dataSource = self
-        
-        collectionView.isPagingEnabled = false
-        horizontal.isPagingEnabled = false
+        galleryCollectionView.delegate = self
+        galleryCollectionView.dataSource = self
+        galleryCollectionView.isPagingEnabled = false
       
-      prepareforInfinityscroll()
-       configureFirstApprouch()
-        configureSecondApprouch()
-    }
-    func prepareforInfinityscroll() {
-        let first = stringArray.first
-        let last = stringArray.last
-        
-        stringArray.insert(last!, at: 0)
-        stringArray.append(first!)
-        
+        configureGallery()
     }
     
     
-    func configureFirstApprouch(){
-         collectionView.setScaledDesginParam(scaledPattern: .horizontalCenter, maxScale: 1.2, minScale: 0.5, maxAlpha: 1.0, minAlpha: 0.5)
-    }
-    
-    func configureSecondApprouch() {
-        verticalLayout.scrollDirection = .vertical
+    func configureGallery() {
         verticalLayout.minimumLineSpacing = 10
         verticalLayout.itemSize = CGSize(width: 200, height: 200)
         
@@ -55,25 +35,33 @@ class ViewController: UIViewController {
         horizontalLayout.minimumLineSpacing = 10
         horizontalLayout.itemSize = CGSize(width: 200, height: 200)
 
-    horizontal.decelerationRate = UIScrollViewDecelerationRateFast
-    horizontal.collectionViewLayout = verticalLayout  // initail layout
+    galleryCollectionView.decelerationRate = UIScrollViewDecelerationRateFast
+    //galleryCollectionView.collectionViewLayout = horizontalLayout  // initail layout
         
     }
     
     override func willRotate(to toInterfaceOrientation: UIInterfaceOrientation, duration: TimeInterval) {
-        horizontal.collectionViewLayout.invalidateLayout()
         switch toInterfaceOrientation {
         case .landscapeLeft,.landscapeRight:
-            horizontal.collectionViewLayout = self.horizontalLayout
+            //horizontal.collectionViewLayout = self.horizontalLayout
+         //   customScrollDirection = .horizontal
+            UIView.animate(withDuration: 1) { () -> Void in
+               // self.galleryCollectionView.collectionViewLayout.invalidateLayout()
+               // self.galleryCollectionView.setCollectionViewLayout(self.gallery, animated: false)
+            }
+        
+
         case .portrait,.portraitUpsideDown,.unknown:
-            horizontal.collectionViewLayout = self.verticalLayout
+            //horizontal.collectionViewLayout = self.verticalLayout
+            UIView.animate(withDuration: 1) { () -> Void in
+               // self.galleryCollectionView.collectionViewLayout.invalidateLayout()
+               // self.galleryCollectionView.setCollectionViewLayout(self.gallery, animated: false)
+            }
         }
     }
     
     
 }
-
-
 //
 // MARK: - UICollectionViewDataSource, UICollectionViewDelegate
 //
@@ -85,30 +73,20 @@ extension ViewController: UICollectionViewDataSource, UICollectionViewDelegate {
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell: customCell = (collectionView.dequeueReusableCell(withReuseIdentifier: "CollectionCell", for: indexPath as IndexPath) as? customCell)!
-        
         cell.customLabel.text = stringArray[indexPath.row]
         return cell
     }
-    
-}
-
-
-//
-// MARK: - UIScrollViewDelegate
-//
-extension ViewController: UIScrollViewDelegate {
-    
     func scrollViewDidScroll(_ scrollView: UIScrollView) {
-        
-        guard scrollView.isKind(of: UICollectionView.self) else {return}
-        guard (scrollView as! UICollectionView).tag == 1 else {
-            return}
-        
-      
-        collectionView.scaledVisibleCells()
+        if galleryCollectionView.collectionViewLayout.isKind(of: VerticalFlowLayout.self) {
+            let lay = galleryCollectionView.collectionViewLayout as! VerticalFlowLayout
+            lay.recenterIfNeeded()
+        }
     }
+    
 }
+
 class customCell :UICollectionViewCell {
     
     @IBOutlet weak var customLabel: UILabel!
 }
+

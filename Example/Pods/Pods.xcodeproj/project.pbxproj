@@ -9,18 +9,17 @@
 /* Begin PBXBuildFile section */
 		265D84046DA5C8AF91E2280B5218CFAF /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CBB3DE36805AF21409EC968A9691732F /* Foundation.framework */; };
 		37C23804C0ACD9FB0B58790A69076B5E /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CBB3DE36805AF21409EC968A9691732F /* Foundation.framework */; };
+		3B234C53C4E33272C2EC20EAADB53308 /* VerticalLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6AA0B3A18A11CF1946B2A714DD11590C /* VerticalLayout.swift */; };
+		3D3904DC2F491292874C86EDAF1A9B9E /* HorizontalFlowLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09E48259D55500DBF7369FFE37BA6CCA /* HorizontalFlowLayout.swift */; };
+		5A622875C296EBC83EAE0A1CAED84B62 /* UICollectionViewGallery-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 968CD4940404F630C201E92943328768 /* UICollectionViewGallery-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		651609B7E0C9ABF7B48F6CF25618F833 /* Pods-UICollectionViewGallery_Tests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 0A8A7878D19E37EA79F6B93ADA7FA592 /* Pods-UICollectionViewGallery_Tests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		7D8ED05F7938F63A2F92012649C6C044 /* Pods-UICollectionViewGallery_Example-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 6EF6F36B3A75E5D5B624BC2A75C9ABDE /* Pods-UICollectionViewGallery_Example-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		91FEB87AEB4449F2200458277EA59C4B /* ScaleCollectionViews.swift in Sources */ = {isa = PBXBuildFile; fileRef = 491CFF470050F2664B43DC9F0CC528FB /* ScaleCollectionViews.swift */; };
 		9607E8AAFD50BE63151325A3AB1B93F2 /* Pods-UICollectionViewGallery_Example-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 10CC324E34EC99A765033B0710CFB658 /* Pods-UICollectionViewGallery_Example-dummy.m */; };
-		A12210781DE18DD500FDE808 /* VerticalLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = A12210771DE18DD500FDE808 /* VerticalLayout.swift */; };
-		A12D77861DE111DD0023ED31 /* HorizontalLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = A12D77851DE111DD0023ED31 /* HorizontalLayout.swift */; };
-		A19558AC1DE2FA5500A6E220 /* InfiniteScrollingLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = A19558AB1DE2FA5500A6E220 /* InfiniteScrollingLayout.swift */; };
-		A19558B01DE319F400A6E220 /* InfiniteHorizontalLayout.h in Headers */ = {isa = PBXBuildFile; fileRef = A19558AE1DE319F400A6E220 /* InfiniteHorizontalLayout.h */; };
-		A19558B11DE319F400A6E220 /* InfiniteHorizontalLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = A19558AF1DE319F400A6E220 /* InfiniteHorizontalLayout.m */; };
-		A1CD2A983CF706F68652784124E61734 /* UICollectionViewGallery-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 968CD4940404F630C201E92943328768 /* UICollectionViewGallery-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		9A43A86FC6ED531707DCE8558E8591EB /* HorizontalLgayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06A46D08297A0C349D6688D5C6286A5D /* HorizontalLgayout.swift */; };
+		A19558C01DE4803F00A6E220 /* VerticalFlowLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = A19558BF1DE4803F00A6E220 /* VerticalFlowLayout.swift */; };
 		CB80D78C86359C1FC28CDBF2055895B7 /* Pods-UICollectionViewGallery_Tests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 9D824D49D935C295DA66F0AD10E4E7E9 /* Pods-UICollectionViewGallery_Tests-dummy.m */; };
-		DF2AA8746A202DE914A7B766A842A604 /* UICollectionViewGallery-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = FB55CD62B3767FF4513999C56D2942C4 /* UICollectionViewGallery-dummy.m */; };
+		CCCBEF1D754091605784F2E683777635 /* UICollectionViewGallery-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = FB55CD62B3767FF4513999C56D2942C4 /* UICollectionViewGallery-dummy.m */; };
+		E63F853DFCB51ED4CC86962D5DA36FB8 /* ScaleCollectionViews.swift in Sources */ = {isa = PBXBuildFile; fileRef = 493B393F549C81A8EB5E8B117EE557D5 /* ScaleCollectionViews.swift */; };
 		F24CA53DA5DF27489B5BA77809915C5F /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CBB3DE36805AF21409EC968A9691732F /* Foundation.framework */; };
 /* End PBXBuildFile section */
 
@@ -35,6 +34,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		06A46D08297A0C349D6688D5C6286A5D /* HorizontalLgayout.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = HorizontalLgayout.swift; sourceTree = "<group>"; };
+		09E48259D55500DBF7369FFE37BA6CCA /* HorizontalFlowLayout.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = HorizontalFlowLayout.swift; sourceTree = "<group>"; };
 		0A6239F1374CAC356F11909433F4B441 /* Pods-UICollectionViewGallery_Tests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = "Pods-UICollectionViewGallery_Tests.modulemap"; sourceTree = "<group>"; };
 		0A8A7878D19E37EA79F6B93ADA7FA592 /* Pods-UICollectionViewGallery_Tests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-UICollectionViewGallery_Tests-umbrella.h"; sourceTree = "<group>"; };
 		10CC324E34EC99A765033B0710CFB658 /* Pods-UICollectionViewGallery_Example-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-UICollectionViewGallery_Example-dummy.m"; sourceTree = "<group>"; };
@@ -43,11 +44,12 @@
 		3B39E10F5541B58E6C99B3807B42454B /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		437E832B65FCD13860D2B3AF9AC01953 /* Pods-UICollectionViewGallery_Tests-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-UICollectionViewGallery_Tests-frameworks.sh"; sourceTree = "<group>"; };
 		4624DA83A52D516338EDA5E0A2F06D1D /* Pods-UICollectionViewGallery_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-UICollectionViewGallery_Tests.debug.xcconfig"; sourceTree = "<group>"; };
-		491CFF470050F2664B43DC9F0CC528FB /* ScaleCollectionViews.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = ScaleCollectionViews.swift; sourceTree = "<group>"; };
+		493B393F549C81A8EB5E8B117EE557D5 /* ScaleCollectionViews.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = ScaleCollectionViews.swift; sourceTree = "<group>"; };
 		4B4B39ADD546E83E34F463B0F37C9CA6 /* Pods-UICollectionViewGallery_Tests-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-UICollectionViewGallery_Tests-resources.sh"; sourceTree = "<group>"; };
 		50C0E74ACD13E91D320653BF152EBAA0 /* Pods-UICollectionViewGallery_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-UICollectionViewGallery_Example.release.xcconfig"; sourceTree = "<group>"; };
 		50CF152C6BB52D2660EF0C9A3437C704 /* Pods_UICollectionViewGallery_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_UICollectionViewGallery_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		51CDF50B0BCA5160AB59396EC66C0A0D /* Pods-UICollectionViewGallery_Example-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-UICollectionViewGallery_Example-acknowledgements.markdown"; sourceTree = "<group>"; };
+		6AA0B3A18A11CF1946B2A714DD11590C /* VerticalLayout.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = VerticalLayout.swift; sourceTree = "<group>"; };
 		6EF6F36B3A75E5D5B624BC2A75C9ABDE /* Pods-UICollectionViewGallery_Example-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-UICollectionViewGallery_Example-umbrella.h"; sourceTree = "<group>"; };
 		822F8EA089C45E905DB58CF3968B2D55 /* Pods-UICollectionViewGallery_Tests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-UICollectionViewGallery_Tests-acknowledgements.plist"; sourceTree = "<group>"; };
 		82479BE6781F1C171D32F9C8AC2AD10D /* Pods-UICollectionViewGallery_Example-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-UICollectionViewGallery_Example-frameworks.sh"; sourceTree = "<group>"; };
@@ -57,11 +59,7 @@
 		93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		968CD4940404F630C201E92943328768 /* UICollectionViewGallery-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "UICollectionViewGallery-umbrella.h"; sourceTree = "<group>"; };
 		9D824D49D935C295DA66F0AD10E4E7E9 /* Pods-UICollectionViewGallery_Tests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-UICollectionViewGallery_Tests-dummy.m"; sourceTree = "<group>"; };
-		A12210771DE18DD500FDE808 /* VerticalLayout.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VerticalLayout.swift; sourceTree = "<group>"; };
-		A12D77851DE111DD0023ED31 /* HorizontalLayout.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HorizontalLayout.swift; sourceTree = "<group>"; };
-		A19558AB1DE2FA5500A6E220 /* InfiniteScrollingLayout.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InfiniteScrollingLayout.swift; sourceTree = "<group>"; };
-		A19558AE1DE319F400A6E220 /* InfiniteHorizontalLayout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = InfiniteHorizontalLayout.h; sourceTree = "<group>"; };
-		A19558AF1DE319F400A6E220 /* InfiniteHorizontalLayout.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = InfiniteHorizontalLayout.m; sourceTree = "<group>"; };
+		A19558BF1DE4803F00A6E220 /* VerticalFlowLayout.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VerticalFlowLayout.swift; sourceTree = "<group>"; };
 		B4C866B55B215FE17284413ECF992C37 /* UICollectionViewGallery.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = UICollectionViewGallery.xcconfig; sourceTree = "<group>"; };
 		B5EF892FC78BCB43E8590C773F62C36A /* Pods-UICollectionViewGallery_Example.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = "Pods-UICollectionViewGallery_Example.modulemap"; sourceTree = "<group>"; };
 		B788D23EC0B1948CF42CF835B9E5488A /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -116,14 +114,6 @@
 			path = "Example/Pods/Target Support Files/UICollectionViewGallery";
 			sourceTree = "<group>";
 		};
-		0E4A1F762CFB1C7092E1ED92B2A60001 /* UICollectionViewGallery */ = {
-			isa = PBXGroup;
-			children = (
-				FC3B2E63E0480CAF5E964DA08D09003B /* Classes */,
-			);
-			path = UICollectionViewGallery;
-			sourceTree = "<group>";
-		};
 		1E335673FFC74B4C66ED78039A659215 /* Targets Support Files */ = {
 			isa = PBXGroup;
 			children = (
@@ -169,6 +159,24 @@
 			path = "Target Support Files/Pods-UICollectionViewGallery_Tests";
 			sourceTree = "<group>";
 		};
+		5E9232E18ED439B9F56A61EB3D6B898A /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				A19558C11DE49D8300A6E220 /* New Group */,
+				A19558BF1DE4803F00A6E220 /* VerticalFlowLayout.swift */,
+				09E48259D55500DBF7369FFE37BA6CCA /* HorizontalFlowLayout.swift */,
+			);
+			path = Classes;
+			sourceTree = "<group>";
+		};
+		74CA0866BF0F8E1EFC6CF915862593CE /* UICollectionViewGallery */ = {
+			isa = PBXGroup;
+			children = (
+				5E9232E18ED439B9F56A61EB3D6B898A /* Classes */,
+			);
+			path = UICollectionViewGallery;
+			sourceTree = "<group>";
+		};
 		7531C8F8DE19F1AA3C8A7AC97A91DC29 /* iOS */ = {
 			isa = PBXGroup;
 			children = (
@@ -206,13 +214,14 @@
 			name = "Development Pods";
 			sourceTree = "<group>";
 		};
-		A19558AD1DE319F400A6E220 /* InfiniteHorizontalLayout */ = {
+		A19558C11DE49D8300A6E220 /* New Group */ = {
 			isa = PBXGroup;
 			children = (
-				A19558AE1DE319F400A6E220 /* InfiniteHorizontalLayout.h */,
-				A19558AF1DE319F400A6E220 /* InfiniteHorizontalLayout.m */,
+				06A46D08297A0C349D6688D5C6286A5D /* HorizontalLgayout.swift */,
+				493B393F549C81A8EB5E8B117EE557D5 /* ScaleCollectionViews.swift */,
+				6AA0B3A18A11CF1946B2A714DD11590C /* VerticalLayout.swift */,
 			);
-			path = InfiniteHorizontalLayout;
+			name = "New Group";
 			sourceTree = "<group>";
 		};
 		BC3CA7F9E30CC8F7E2DD044DD34432FC /* Frameworks */ = {
@@ -227,22 +236,10 @@
 			isa = PBXGroup;
 			children = (
 				0BBD2E27625541521D16C8FB7923EF6A /* Support Files */,
-				0E4A1F762CFB1C7092E1ED92B2A60001 /* UICollectionViewGallery */,
+				74CA0866BF0F8E1EFC6CF915862593CE /* UICollectionViewGallery */,
 			);
 			name = UICollectionViewGallery;
 			path = ../..;
-			sourceTree = "<group>";
-		};
-		FC3B2E63E0480CAF5E964DA08D09003B /* Classes */ = {
-			isa = PBXGroup;
-			children = (
-				A19558AD1DE319F400A6E220 /* InfiniteHorizontalLayout */,
-				491CFF470050F2664B43DC9F0CC528FB /* ScaleCollectionViews.swift */,
-				A12D77851DE111DD0023ED31 /* HorizontalLayout.swift */,
-				A12210771DE18DD500FDE808 /* VerticalLayout.swift */,
-				A19558AB1DE2FA5500A6E220 /* InfiniteScrollingLayout.swift */,
-			);
-			path = Classes;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -264,12 +261,11 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		F4490B64BF5CE805F15763D35E0A7522 /* Headers */ = {
+		ECBD438F4DBC8A6AB24DD6B6B81E681A /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A19558B01DE319F400A6E220 /* InfiniteHorizontalLayout.h in Headers */,
-				A1CD2A983CF706F68652784124E61734 /* UICollectionViewGallery-umbrella.h in Headers */,
+				5A622875C296EBC83EAE0A1CAED84B62 /* UICollectionViewGallery-umbrella.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -297,9 +293,9 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 1F6AE862709B3DEDD2718FA6CE9D91AE /* Build configuration list for PBXNativeTarget "UICollectionViewGallery" */;
 			buildPhases = (
-				3D6689F37BC053FAE248C61458AE3A69 /* Sources */,
+				FBD03593A8ED5C405C5FF45D69F90556 /* Sources */,
 				7067C6239C3389C3A2BF4F91884F3606 /* Frameworks */,
-				F4490B64BF5CE805F15763D35E0A7522 /* Headers */,
+				ECBD438F4DBC8A6AB24DD6B6B81E681A /* Headers */,
 			);
 			buildRules = (
 			);
@@ -336,19 +332,6 @@
 			attributes = {
 				LastSwiftUpdateCheck = 0730;
 				LastUpgradeCheck = 0700;
-				TargetAttributes = {
-					518187163336044DC1E7729477EE8790 = {
-						LastSwiftMigration = 0810;
-					};
-					9CF7EF48179270A2895B6A66AD5837A8 = {
-						LastSwiftMigration = 0810;
-					};
-					B8EBD8F21C99833EA1BB0DC067E5482E = {
-						DevelopmentTeam = UG327W9DM7;
-						LastSwiftMigration = 0810;
-						ProvisioningStyle = Automatic;
-					};
-				};
 			};
 			buildConfigurationList = 2D8E8EC45A3A1A1D94AE762CB5028504 /* Build configuration list for PBXProject "Pods" */;
 			compatibilityVersion = "Xcode 3.2";
@@ -370,19 +353,6 @@
 /* End PBXProject section */
 
 /* Begin PBXSourcesBuildPhase section */
-		3D6689F37BC053FAE248C61458AE3A69 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				91FEB87AEB4449F2200458277EA59C4B /* ScaleCollectionViews.swift in Sources */,
-				A19558AC1DE2FA5500A6E220 /* InfiniteScrollingLayout.swift in Sources */,
-				A12D77861DE111DD0023ED31 /* HorizontalLayout.swift in Sources */,
-				DF2AA8746A202DE914A7B766A842A604 /* UICollectionViewGallery-dummy.m in Sources */,
-				A12210781DE18DD500FDE808 /* VerticalLayout.swift in Sources */,
-				A19558B11DE319F400A6E220 /* InfiniteHorizontalLayout.m in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		98E994E3203D5955B13A6BAEEE36EB60 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -396,6 +366,19 @@
 			buildActionMask = 2147483647;
 			files = (
 				9607E8AAFD50BE63151325A3AB1B93F2 /* Pods-UICollectionViewGallery_Example-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FBD03593A8ED5C405C5FF45D69F90556 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9A43A86FC6ED531707DCE8558E8591EB /* HorizontalLgayout.swift in Sources */,
+				A19558C01DE4803F00A6E220 /* VerticalFlowLayout.swift in Sources */,
+				3D3904DC2F491292874C86EDAF1A9B9E /* HorizontalFlowLayout.swift in Sources */,
+				E63F853DFCB51ED4CC86962D5DA36FB8 /* ScaleCollectionViews.swift in Sources */,
+				CCCBEF1D754091605784F2E683777635 /* UICollectionViewGallery-dummy.m in Sources */,
+				3B234C53C4E33272C2EC20EAADB53308 /* VerticalLayout.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -440,7 +423,6 @@
 				PRODUCT_NAME = Pods_UICollectionViewGallery_Tests;
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
-				SWIFT_VERSION = 3.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
@@ -520,7 +502,6 @@
 				PRODUCT_NAME = Pods_UICollectionViewGallery_Tests;
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
-				SWIFT_VERSION = 3.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
@@ -531,14 +512,12 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 50C0E74ACD13E91D320653BF152EBAA0 /* Pods-UICollectionViewGallery_Example.release.xcconfig */;
 			buildSettings = {
-				CLANG_ENABLE_MODULES = YES;
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
 				CURRENT_PROJECT_VERSION = 1;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				DEFINES_MODULE = YES;
-				DEVELOPMENT_TEAM = UG327W9DM7;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
@@ -556,10 +535,8 @@
 				PODS_ROOT = "$(SRCROOT)";
 				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
 				PRODUCT_NAME = Pods_UICollectionViewGallery_Example;
-				PROVISIONING_PROFILE_SPECIFIER = "";
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
-				SWIFT_VERSION = 3.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
@@ -591,7 +568,6 @@
 				PRODUCT_NAME = UICollectionViewGallery;
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
-				SWIFT_OBJC_BRIDGING_HEADER = "";
 				SWIFT_VERSION = 3.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VERSIONING_SYSTEM = "apple-generic";
@@ -664,7 +640,6 @@
 				PRODUCT_NAME = UICollectionViewGallery;
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
-				SWIFT_OBJC_BRIDGING_HEADER = "";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 3.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -677,14 +652,12 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 8D35D6E427D03F739DAA1144DA902D76 /* Pods-UICollectionViewGallery_Example.debug.xcconfig */;
 			buildSettings = {
-				CLANG_ENABLE_MODULES = YES;
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
 				CURRENT_PROJECT_VERSION = 1;
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				DEFINES_MODULE = YES;
-				DEVELOPMENT_TEAM = UG327W9DM7;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
@@ -702,11 +675,9 @@
 				PODS_ROOT = "$(SRCROOT)";
 				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
 				PRODUCT_NAME = Pods_UICollectionViewGallery_Example;
-				PROVISIONING_PROFILE_SPECIFIER = "";
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
-				SWIFT_VERSION = 3.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
