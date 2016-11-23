@@ -10,20 +10,20 @@ import UIKit
 import UICollectionViewGallery
 
 class ViewController: UIViewController {
-
+    
     
     @IBOutlet weak var galleryCollectionView: UICollectionView!
     var stringArray: [String] = ["1", "2", "3", "4", "5", "6", "7", "8", "9", "10"]
     let verticalLayout = VerticalFlowLayout()
     var horizontalLayout = HorizontalFlowLayout()
-   
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
         galleryCollectionView.delegate = self
         galleryCollectionView.dataSource = self
         galleryCollectionView.isPagingEnabled = false
-      
+        
         configureGallery()
     }
     
@@ -32,31 +32,26 @@ class ViewController: UIViewController {
         verticalLayout.minimumLineSpacing = 10
         verticalLayout.itemSize = CGSize(width: 200, height: 200)
         
-        horizontalLayout.scrollDirection = .horizontal
         horizontalLayout.minimumLineSpacing = 10
         horizontalLayout.itemSize = CGSize(width: 200, height: 200)
-
-    galleryCollectionView.decelerationRate = UIScrollViewDecelerationRateFast
-    //galleryCollectionView.collectionViewLayout = horizontalLayout  // initail layout
+        
+        galleryCollectionView.decelerationRate = UIScrollViewDecelerationRateFast
+        galleryCollectionView.collectionViewLayout = verticalLayout  // initail layout
         
     }
     
     override func willRotate(to toInterfaceOrientation: UIInterfaceOrientation, duration: TimeInterval) {
         switch toInterfaceOrientation {
         case .landscapeLeft,.landscapeRight:
-            //horizontal.collectionViewLayout = self.horizontalLayout
-         //   customScrollDirection = .horizontal
-            UIView.animate(withDuration: 1) { () -> Void in
-               // self.galleryCollectionView.collectionViewLayout.invalidateLayout()
-               // self.galleryCollectionView.setCollectionViewLayout(self.gallery, animated: false)
+            UIView.animate(withDuration: 0.2) { () -> Void in
+                self.galleryCollectionView.collectionViewLayout.invalidateLayout()
+                self.galleryCollectionView.setCollectionViewLayout(self.horizontalLayout, animated: false)
             }
-        
-
+            
         case .portrait,.portraitUpsideDown,.unknown:
-            //horizontal.collectionViewLayout = self.verticalLayout
-            UIView.animate(withDuration: 1) { () -> Void in
-               // self.galleryCollectionView.collectionViewLayout.invalidateLayout()
-               // self.galleryCollectionView.setCollectionViewLayout(self.gallery, animated: false)
+            UIView.animate(withDuration: 0.2) { () -> Void in
+                self.galleryCollectionView.collectionViewLayout.invalidateLayout()
+                self.galleryCollectionView.setCollectionViewLayout(self.verticalLayout, animated: false)
             }
         }
     }
@@ -77,6 +72,8 @@ extension ViewController: UICollectionViewDataSource, UICollectionViewDelegate {
         cell.customLabel.text = stringArray[indexPath.row]
         return cell
     }
+    
+    
     func scrollViewDidScroll(_ scrollView: UIScrollView) {
         if galleryCollectionView.collectionViewLayout.isKind(of: VerticalFlowLayout.self) {
             let lay = galleryCollectionView.collectionViewLayout as! VerticalFlowLayout
