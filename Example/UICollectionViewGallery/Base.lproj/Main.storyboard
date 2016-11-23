@@ -74,7 +74,9 @@
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstAttribute="trailing" secondItem="gjK-d7-SIH" secondAttribute="trailing" id="Gs0-vj-7rr"/>
+                            <constraint firstAttribute="trailing" secondItem="gjK-d7-SIH" secondAttribute="trailing" id="Gs0-vj-7rr">
+                                <variation key="heightClass=compact-widthClass=compact" constant="0.0"/>
+                            </constraint>
                             <constraint firstItem="gjK-d7-SIH" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leading" id="Km0-5j-nuc"/>
                             <constraint firstItem="gjK-d7-SIH" firstAttribute="top" secondItem="kh9-bI-dsS" secondAttribute="top" id="XP1-qf-qkR"/>
                             <constraint firstItem="gjK-d7-SIH" firstAttribute="top" secondItem="kh9-bI-dsS" secondAttribute="top" id="goQ-QB-Xe5"/>
@@ -85,12 +87,12 @@
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="galleryCollectionView" destination="gjK-d7-SIH" id="QqF-U0-E0L"/>
+                        <outlet property="galleryCollectionView" destination="gjK-d7-SIH" id="4N6-Bw-gsd"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-344.80000000000001" y="6.746626686656672"/>
+            <point key="canvasLocation" x="-344.97751124437787" y="5.5999999999999996"/>
         </scene>
     </scenes>
 </document>

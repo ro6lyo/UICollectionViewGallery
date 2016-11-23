@@ -17,6 +17,7 @@
 		A19558C01DE4803F00A6E220 /* VerticalFlowLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = A19558BF1DE4803F00A6E220 /* VerticalFlowLayout.swift */; };
 		A19558C91DE5848400A6E220 /* Pods_UICollectionViewGallery_ExampleTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A19558C81DE5848400A6E220 /* Pods_UICollectionViewGallery_ExampleTests.swift */; };
 		A19558CB1DE5848400A6E220 /* Pods_UICollectionViewGallery_Example.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 50CF152C6BB52D2660EF0C9A3437C704 /* Pods_UICollectionViewGallery_Example.framework */; };
+		A19558EC1DE5E8C600A6E220 /* GalleryCustomClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = A19558EB1DE5E8C600A6E220 /* GalleryCustomClass.swift */; };
 		CB80D78C86359C1FC28CDBF2055895B7 /* Pods-UICollectionViewGallery_Tests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 9D824D49D935C295DA66F0AD10E4E7E9 /* Pods-UICollectionViewGallery_Tests-dummy.m */; };
 		CCCBEF1D754091605784F2E683777635 /* UICollectionViewGallery-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = FB55CD62B3767FF4513999C56D2942C4 /* UICollectionViewGallery-dummy.m */; };
 		F24CA53DA5DF27489B5BA77809915C5F /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CBB3DE36805AF21409EC968A9691732F /* Foundation.framework */; };
@@ -66,6 +67,7 @@
 		A19558C61DE5848400A6E220 /* Pods_UICollectionViewGallery_ExampleTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Pods_UICollectionViewGallery_ExampleTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		A19558C81DE5848400A6E220 /* Pods_UICollectionViewGallery_ExampleTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Pods_UICollectionViewGallery_ExampleTests.swift; sourceTree = "<group>"; };
 		A19558CA1DE5848400A6E220 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A19558EB1DE5E8C600A6E220 /* GalleryCustomClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GalleryCustomClass.swift; sourceTree = "<group>"; };
 		B4C866B55B215FE17284413ECF992C37 /* UICollectionViewGallery.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = UICollectionViewGallery.xcconfig; sourceTree = "<group>"; };
 		B5EF892FC78BCB43E8590C773F62C36A /* Pods-UICollectionViewGallery_Example.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = "Pods-UICollectionViewGallery_Example.modulemap"; sourceTree = "<group>"; };
 		B788D23EC0B1948CF42CF835B9E5488A /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -178,6 +180,7 @@
 			children = (
 				A19558BF1DE4803F00A6E220 /* VerticalFlowLayout.swift */,
 				09E48259D55500DBF7369FFE37BA6CCA /* HorizontalFlowLayout.swift */,
+				A19558EB1DE5E8C600A6E220 /* GalleryCustomClass.swift */,
 			);
 			path = Classes;
 			sourceTree = "<group>";
@@ -369,6 +372,9 @@
 						CreatedOnToolsVersion = 8.1;
 						ProvisioningStyle = Automatic;
 					};
+					B8EBD8F21C99833EA1BB0DC067E5482E = {
+						LastSwiftMigration = 0810;
+					};
 				};
 			};
 			buildConfigurationList = 2D8E8EC45A3A1A1D94AE762CB5028504 /* Build configuration list for PBXProject "Pods" */;
@@ -430,6 +436,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A19558EC1DE5E8C600A6E220 /* GalleryCustomClass.swift in Sources */,
 				A19558C01DE4803F00A6E220 /* VerticalFlowLayout.swift in Sources */,
 				3D3904DC2F491292874C86EDAF1A9B9E /* HorizontalFlowLayout.swift in Sources */,
 				CCCBEF1D754091605784F2E683777635 /* UICollectionViewGallery-dummy.m in Sources */,
@@ -576,6 +583,7 @@
 			baseConfigurationReference = 50C0E74ACD13E91D320653BF152EBAA0 /* Pods-UICollectionViewGallery_Example.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CLANG_ENABLE_MODULES = YES;
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
@@ -601,6 +609,7 @@
 				PRODUCT_NAME = Pods_UICollectionViewGallery_Example;
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 3.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
@@ -773,6 +782,7 @@
 			baseConfigurationReference = 8D35D6E427D03F739DAA1144DA902D76 /* Pods-UICollectionViewGallery_Example.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CLANG_ENABLE_MODULES = YES;
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
@@ -799,6 +809,7 @@
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 3.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
@@ -833,6 +844,7 @@
 				A19558CF1DE5848400A6E220 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		BA1A05A31CB2D5BB77B3AE03D9F76ADD /* Build configuration list for PBXNativeTarget "Pods-UICollectionViewGallery_Tests" */ = {
 			isa = XCConfigurationList;

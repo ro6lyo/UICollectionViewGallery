@@ -11,10 +11,17 @@ import UIKit
 
 
 
+let horizontalLayout = HorizontalFlowLayout()
+
+var currentState:OrientationState = .horizontal
+
 open class VerticalFlowLayout: UICollectionViewFlowLayout {
     
     var collectionViewOriginalSize = CGSize.zero
     var used = false
+    
+    open var inifiniteScroll = true   //  can be changed based on requared behaviour
+    open var scaleElements = true     //  can be changed based on requared behaviour
     
     open var scalingOffset: CGFloat = 110
     open var minimumScaleFactor: CGFloat = 0.5
@@ -23,7 +30,7 @@ open class VerticalFlowLayout: UICollectionViewFlowLayout {
     func preferredContentOffsetForElement(at index: Int) -> CGPoint {
         guard self.collectionView!.numberOfItems(inSection: 0) > 0 else { return CGPoint(x: CGFloat(0), y: CGFloat(0)) }
         
-        if used {
+        if used && inifiniteScroll {
             return CGPoint(x:self.collectionView!.contentOffset.x, y:item(at: index)+tunc() - self.collectionView!.contentInset.bottom)
         }
         
@@ -41,7 +48,7 @@ open class VerticalFlowLayout: UICollectionViewFlowLayout {
     
     
     open func recenterIfNeeded() {
-        if used {
+        if used && inifiniteScroll {
             
             let page = self.collectionView!.contentOffset.y / collectionViewOriginalSize.height
             
@@ -62,6 +69,7 @@ open class VerticalFlowLayout: UICollectionViewFlowLayout {
     
     
     override open func prepare() {
+        
         assert(self.collectionView!.numberOfSections <= 1, "You cannot use UICollectionViewGallery with more than 2 sections")
         self.used = self.collectionView!.numberOfItems(inSection: 0) >= MIN_NUMBER_OF_ITEMS_REQUIRED
         self.scrollDirection = .vertical
@@ -70,12 +78,13 @@ open class VerticalFlowLayout: UICollectionViewFlowLayout {
         self.collectionView!.showsVerticalScrollIndicator = false
         super.prepare()
         self.collectionViewOriginalSize = super.collectionViewContentSize
+
     }
     
     
     override open var collectionViewContentSize: CGSize {
         var size: CGSize
-        if used {
+        if used && inifiniteScroll {
             size = CGSize(width: collectionViewOriginalSize.width, height: collectionViewOriginalSize.height * self.itemSize.height)
         }
         else {
