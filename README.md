@@ -1,6 +1,7 @@
 # UICollectionViewGallery
 
 [![CI Status](http://img.shields.io/travis/ro6lyo/UICollectionViewGallery.svg?style=flat)](https://travis-ci.org/ro6lyo/UICollectionViewGallery)
+[![Swift Version](https://img.shields.io/badge/Swift-3.0.x-orange.svg)]()
 [![Version](https://img.shields.io/cocoapods/v/UICollectionViewGallery.svg?style=flat)](http://cocoapods.org/pods/UICollectionViewGallery)
 [![License](https://img.shields.io/cocoapods/l/UICollectionViewGallery.svg?style=flat)](http://cocoapods.org/pods/UICollectionViewGallery)
 [![Platform](https://img.shields.io/cocoapods/p/UICollectionViewGallery.svg?style=flat)](http://cocoapods.org/pods/UICollectionViewGallery)
@@ -10,6 +11,9 @@
 To run the example project, clone the repo, and run `pod install` from the Example directory first.
 
 ## Requirements
+- iOS 9.#+ 
+- Xcode 8.1+
+- Swift 3.0+
 
 ## Installation
 
