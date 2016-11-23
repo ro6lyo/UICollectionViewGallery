@@ -76,8 +76,11 @@ extension ViewController: UICollectionViewDataSource, UICollectionViewDelegate {
     
     func scrollViewDidScroll(_ scrollView: UIScrollView) {
         if galleryCollectionView.collectionViewLayout.isKind(of: VerticalFlowLayout.self) {
-            let lay = galleryCollectionView.collectionViewLayout as! VerticalFlowLayout
-            lay.recenterIfNeeded()
+            let layout = galleryCollectionView.collectionViewLayout as! VerticalFlowLayout
+            layout.recenterIfNeeded()
+        } else if galleryCollectionView.collectionViewLayout.isKind(of: HorizontalFlowLayout.self){
+            let layout = galleryCollectionView.collectionViewLayout as! HorizontalFlowLayout
+            layout.recenterIfNeeded()
         }
     }
     

@@ -92,52 +92,5 @@
             </objects>
             <point key="canvasLocation" x="-344.80000000000001" y="6.746626686656672"/>
         </scene>
-        <!--View Controller-->
-        <scene sceneID="xzS-qP-RUC">
-            <objects>
-                <viewController id="U0G-zs-d0W" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="5h7-1y-a1W"/>
-                        <viewControllerLayoutGuide type="bottom" id="2Gy-fI-kNF"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="NZD-n5-gHx">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="IF5-Dg-fWC">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="GMU-tt-JU4">
-                                    <size key="itemSize" width="96" height="93"/>
-                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
-                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
-                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
-                                </collectionViewFlowLayout>
-                                <cells>
-                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="Cak-Wc-S52">
-                                        <rect key="frame" x="0.0" y="0.0" width="96" height="93"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
-                                            <rect key="frame" x="0.0" y="0.0" width="96" height="93"/>
-                                            <autoresizingMask key="autoresizingMask"/>
-                                        </view>
-                                        <color key="backgroundColor" red="0.0" green="0.0" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                    </collectionViewCell>
-                                </cells>
-                            </collectionView>
-                        </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        <constraints>
-                            <constraint firstItem="2Gy-fI-kNF" firstAttribute="top" secondItem="IF5-Dg-fWC" secondAttribute="bottom" id="DAw-C3-xaO"/>
-                            <constraint firstItem="IF5-Dg-fWC" firstAttribute="top" secondItem="NZD-n5-gHx" secondAttribute="top" id="UTo-i5-Bia"/>
-                            <constraint firstAttribute="trailing" secondItem="IF5-Dg-fWC" secondAttribute="trailing" id="a7d-xj-yzU"/>
-                            <constraint firstItem="IF5-Dg-fWC" firstAttribute="leading" secondItem="NZD-n5-gHx" secondAttribute="leading" id="oWJ-fw-Sn4"/>
-                        </constraints>
-                    </view>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="axm-Ku-RfK" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="548" y="3.1484257871064472"/>
-        </scene>
     </scenes>
 </document>
