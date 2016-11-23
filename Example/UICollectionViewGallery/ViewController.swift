@@ -36,7 +36,7 @@ class ViewController: UIViewController {
         horizontalLayout.itemSize = CGSize(width: 200, height: 200)
         
         galleryCollectionView.decelerationRate = UIScrollViewDecelerationRateFast
-        galleryCollectionView.collectionViewLayout = verticalLayout  // initail layout
+        galleryCollectionView.collectionViewLayout = verticalLayout
         
     }
     
