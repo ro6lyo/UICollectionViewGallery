@@ -11,6 +11,7 @@ import UICollectionViewGallery
 
 class ViewController: UIViewController {
 
+    
     @IBOutlet weak var galleryCollectionView: UICollectionView!
     var stringArray: [String] = ["1", "2", "3", "4", "5", "6", "7", "8", "9", "10"]
     let verticalLayout = VerticalFlowLayout()
