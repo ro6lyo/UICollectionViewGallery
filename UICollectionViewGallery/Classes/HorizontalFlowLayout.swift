@@ -41,8 +41,8 @@ open class HorizontalFlowLayout: UICollectionViewFlowLayout {
     open func recenterIfNeeded() {
         if used {
             
-            var page = self.collectionView!.contentOffset.x / collectionViewOriginalSize.width
-            var residue = (self.collectionView!.contentOffset.x - trunc(page) * collectionViewOriginalSize.width) / collectionViewOriginalSize.width
+            let page = self.collectionView!.contentOffset.x / collectionViewOriginalSize.width
+            let residue = (self.collectionView!.contentOffset.x - trunc(page) * collectionViewOriginalSize.width) / collectionViewOriginalSize.width
         
 
             if residue >= 0.0 && residue <= 0.0002 && page >= self.itemSize.width / 2 + 40 {
@@ -144,8 +144,8 @@ open class HorizontalFlowLayout: UICollectionViewFlowLayout {
         if used == false {
             return super.layoutAttributesForElements(in: rect)!
         }
-        var position = rect.origin.x / collectionViewOriginalSize.width
-        var rectPosition = position - trunc(position)
+        let position = rect.origin.x / collectionViewOriginalSize.width
+        let rectPosition = position - trunc(position)
         var modifiedRect = CGRect(x: rectPosition * collectionViewOriginalSize.width, y: rect.origin.y, width: rect.size.width, height: rect.size.height)
         var secondRect = CGRect.zero
         
@@ -153,9 +153,9 @@ open class HorizontalFlowLayout: UICollectionViewFlowLayout {
             secondRect = CGRect(x: 0, y: rect.origin.y, width: modifiedRect.maxX - collectionViewOriginalSize.width, height: rect.size.height)
             modifiedRect.size.width = collectionViewOriginalSize.width - modifiedRect.origin.x
         }
-        var attributes = self.newAttributes(for: modifiedRect, offset: trunc(position) * collectionViewOriginalSize.width)
-        var attributes2 = self.newAttributes(for: secondRect, offset: (trunc(position) + 1) * collectionViewOriginalSize.width)
-        var isResult = attributes + attributes2
+        let attributes = self.newAttributes(for: modifiedRect, offset: trunc(position) * collectionViewOriginalSize.width)
+        let attributes2 = self.newAttributes(for: secondRect, offset: (trunc(position) + 1) * collectionViewOriginalSize.width)
+        let isResult = attributes + attributes2
         
         
         return isResult
@@ -167,7 +167,7 @@ open class HorizontalFlowLayout: UICollectionViewFlowLayout {
     }
     
     func newAttributes(for rect: CGRect, offset: CGFloat) -> [UICollectionViewLayoutAttributes] {
-        var attributes = super.layoutAttributesForElements(in: rect)
+        let attributes = super.layoutAttributesForElements(in: rect)
         return self.modifyLayoutAttributes(attributes!, offset: offset)
     }
     
@@ -180,7 +180,7 @@ open class HorizontalFlowLayout: UICollectionViewFlowLayout {
         let visibleCenterX = visibleRect.midX // 226907.5
         
         for attr in attributes {
-            var newAttr = attr
+            let newAttr = attr
             newAttr.center = CGPoint(x: attr.center.x + offset, y: attr.center.y)
             isResult.append(newAttr)
             let distanceFromCenter = visibleCenterX - newAttr.center.x

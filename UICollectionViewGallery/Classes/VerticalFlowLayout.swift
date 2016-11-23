@@ -43,9 +43,9 @@ open class VerticalFlowLayout: UICollectionViewFlowLayout {
     open func recenterIfNeeded() {
         if used {
             
-            var page = self.collectionView!.contentOffset.y / collectionViewOriginalSize.height
+            let page = self.collectionView!.contentOffset.y / collectionViewOriginalSize.height
             
-            var radius = (self.collectionView!.contentOffset.y - trunc(page) * collectionViewOriginalSize.height) / collectionViewOriginalSize.height
+            let radius = (self.collectionView!.contentOffset.y - trunc(page) * collectionViewOriginalSize.height) / collectionViewOriginalSize.height
 
             if radius >= 0.0 && radius <= 0.0002 && page >= self.itemSize.width / 2 + 40 {
                 self.collectionView!.contentOffset = self.preferredContentOffsetForElement(at: 0)
@@ -144,8 +144,8 @@ open class VerticalFlowLayout: UICollectionViewFlowLayout {
             return super.layoutAttributesForElements(in: rect)!
         }
        
-        var position = rect.origin.y / collectionViewOriginalSize.height
-        var rectPosition = position - trunc(position)
+        let position = rect.origin.y / collectionViewOriginalSize.height
+        let rectPosition = position - trunc(position)
         var modifiedRect = CGRect(x: rect.origin.x, y: rectPosition * collectionViewOriginalSize.height, width: rect.size.width, height: rect.size.height)
         var secondRect = CGRect.zero
         
@@ -153,9 +153,9 @@ open class VerticalFlowLayout: UICollectionViewFlowLayout {
             secondRect = CGRect(x: rect.origin.x, y: 0, width: rect.size.width, height: modifiedRect.maxY - collectionViewOriginalSize.height)
             modifiedRect.size.height = collectionViewOriginalSize.height - modifiedRect.origin.y
         }
-        var attributes = self.newAttributes(for: modifiedRect, offset: trunc(position) * collectionViewOriginalSize.height)
-        var attributes2 = self.newAttributes(for: secondRect, offset: (trunc(position) + 1) * collectionViewOriginalSize.height)
-        var isResult = attributes + attributes2
+        let attributes = self.newAttributes(for: modifiedRect, offset: trunc(position) * collectionViewOriginalSize.height)
+        let attributes2 = self.newAttributes(for: secondRect, offset: (trunc(position) + 1) * collectionViewOriginalSize.height)
+        let isResult = attributes + attributes2
         
         
         return isResult
@@ -167,7 +167,7 @@ open class VerticalFlowLayout: UICollectionViewFlowLayout {
     }
     
     func newAttributes(for rect: CGRect, offset: CGFloat) -> [UICollectionViewLayoutAttributes] {
-        var attributes = super.layoutAttributesForElements(in: rect)
+        let attributes = super.layoutAttributesForElements(in: rect)
         return self.modifyLayoutAttributes(attributes!, offset: offset)
     }
     
@@ -180,7 +180,7 @@ open class VerticalFlowLayout: UICollectionViewFlowLayout {
         let visibleCenterY = visibleRect.midY
         
         for attr in attributes {
-            var newAttr = attr
+            let newAttr = attr
             newAttr.center = CGPoint(x: attr.center.x , y: attr.center.y + offset)
             isResult.append(newAttr)
             let distanceFromCenter = visibleCenterY - newAttr.center.y
