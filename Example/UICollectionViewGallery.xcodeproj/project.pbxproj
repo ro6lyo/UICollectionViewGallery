@@ -13,7 +13,18 @@
 		607FACDD1AFB9204008FA782 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 607FACDC1AFB9204008FA782 /* Images.xcassets */; };
 		607FACE01AFB9204008FA782 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 607FACDE1AFB9204008FA782 /* LaunchScreen.xib */; };
 		6757A7E806CDA17D8001BDBF /* Pods_UICollectionViewGallery_Example.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 07EBD968658DF5C71AC8E51B /* Pods_UICollectionViewGallery_Example.framework */; };
+		A19558D81DE587F500A6E220 /* UICollectionViewGallery_ExampleTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A19558D71DE587F500A6E220 /* UICollectionViewGallery_ExampleTests.swift */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		A19558DA1DE587F500A6E220 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 607FACC81AFB9204008FA782 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 607FACCF1AFB9204008FA782;
+			remoteInfo = UICollectionViewGallery_Example;
+		};
+/* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		07EBD968658DF5C71AC8E51B /* Pods_UICollectionViewGallery_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_UICollectionViewGallery_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -30,6 +41,9 @@
 		607FACEA1AFB9204008FA782 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		607FACEB1AFB9204008FA782 /* Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tests.swift; sourceTree = "<group>"; };
 		7C5824756A6DFE014609452F /* Pods-UICollectionViewGallery_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-UICollectionViewGallery_Tests.release.xcconfig"; path = "Pods/Target Support Files/Pods-UICollectionViewGallery_Tests/Pods-UICollectionViewGallery_Tests.release.xcconfig"; sourceTree = "<group>"; };
+		A19558D51DE587F500A6E220 /* UICollectionViewGallery_ExampleTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = UICollectionViewGallery_ExampleTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		A19558D71DE587F500A6E220 /* UICollectionViewGallery_ExampleTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UICollectionViewGallery_ExampleTests.swift; sourceTree = "<group>"; };
+		A19558D91DE587F500A6E220 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		AB8301E90C9DDCC09901714D /* Pods-UICollectionViewGallery_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-UICollectionViewGallery_Example.debug.xcconfig"; path = "Pods/Target Support Files/Pods-UICollectionViewGallery_Example/Pods-UICollectionViewGallery_Example.debug.xcconfig"; sourceTree = "<group>"; };
 		C13DEAE863E475734ACC88E1 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
 		DA674D2CEB21C0A9B300A1EB /* Pods_UICollectionViewGallery_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_UICollectionViewGallery_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -42,6 +56,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				6757A7E806CDA17D8001BDBF /* Pods_UICollectionViewGallery_Example.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A19558D21DE587F500A6E220 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -65,6 +86,7 @@
 				607FACF51AFB993E008FA782 /* Podspec Metadata */,
 				607FACD21AFB9204008FA782 /* Example for UICollectionViewGallery */,
 				607FACE81AFB9204008FA782 /* Tests */,
+				A19558D61DE587F500A6E220 /* UICollectionViewGallery_ExampleTests */,
 				607FACD11AFB9204008FA782 /* Products */,
 				4B6BB006F6EC1DF4F310B42F /* Pods */,
 				8562E78683317C6A380E9928 /* Frameworks */,
@@ -75,6 +97,7 @@
 			isa = PBXGroup;
 			children = (
 				607FACD01AFB9204008FA782 /* UICollectionViewGallery_Example.app */,
+				A19558D51DE587F500A6E220 /* UICollectionViewGallery_ExampleTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -137,6 +160,15 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		A19558D61DE587F500A6E220 /* UICollectionViewGallery_ExampleTests */ = {
+			isa = PBXGroup;
+			children = (
+				A19558D71DE587F500A6E220 /* UICollectionViewGallery_ExampleTests.swift */,
+				A19558D91DE587F500A6E220 /* Info.plist */,
+			);
+			path = UICollectionViewGallery_ExampleTests;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -160,13 +192,31 @@
 			productReference = 607FACD01AFB9204008FA782 /* UICollectionViewGallery_Example.app */;
 			productType = "com.apple.product-type.application";
 		};
+		A19558D41DE587F500A6E220 /* UICollectionViewGallery_ExampleTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A19558DE1DE587F500A6E220 /* Build configuration list for PBXNativeTarget "UICollectionViewGallery_ExampleTests" */;
+			buildPhases = (
+				A19558D11DE587F500A6E220 /* Sources */,
+				A19558D21DE587F500A6E220 /* Frameworks */,
+				A19558D31DE587F500A6E220 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				A19558DB1DE587F500A6E220 /* PBXTargetDependency */,
+			);
+			name = UICollectionViewGallery_ExampleTests;
+			productName = UICollectionViewGallery_ExampleTests;
+			productReference = A19558D51DE587F500A6E220 /* UICollectionViewGallery_ExampleTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
 		607FACC81AFB9204008FA782 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastSwiftUpdateCheck = 0720;
+				LastSwiftUpdateCheck = 0810;
 				LastUpgradeCheck = 0810;
 				ORGANIZATIONNAME = CocoaPods;
 				TargetAttributes = {
@@ -174,6 +224,11 @@
 						CreatedOnToolsVersion = 6.3.1;
 						DevelopmentTeam = UG327W9DM7;
 						LastSwiftMigration = 0810;
+					};
+					A19558D41DE587F500A6E220 = {
+						CreatedOnToolsVersion = 8.1;
+						ProvisioningStyle = Automatic;
+						TestTargetID = 607FACCF1AFB9204008FA782;
 					};
 				};
 			};
@@ -191,6 +246,7 @@
 			projectRoot = "";
 			targets = (
 				607FACCF1AFB9204008FA782 /* UICollectionViewGallery_Example */,
+				A19558D41DE587F500A6E220 /* UICollectionViewGallery_ExampleTests */,
 			);
 		};
 /* End PBXProject section */
@@ -203,6 +259,13 @@
 				607FACDB1AFB9204008FA782 /* Main.storyboard in Resources */,
 				607FACE01AFB9204008FA782 /* LaunchScreen.xib in Resources */,
 				607FACDD1AFB9204008FA782 /* Images.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A19558D31DE587F500A6E220 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -266,7 +329,23 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		A19558D11DE587F500A6E220 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A19558D81DE587F500A6E220 /* UICollectionViewGallery_ExampleTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		A19558DB1DE587F500A6E220 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 607FACCF1AFB9204008FA782 /* UICollectionViewGallery_Example */;
+			targetProxy = A19558DA1DE587F500A6E220 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		607FACD91AFB9204008FA782 /* Main.storyboard */ = {
@@ -413,6 +492,42 @@
 			};
 			name = Release;
 		};
+		A19558DC1DE587F500A6E220 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_SUSPICIOUS_MOVES = YES;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				INFOPLIST_FILE = UICollectionViewGallery_ExampleTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.1;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "MehmedKadir.UICollectionViewGallery-ExampleTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_VERSION = 3.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/UICollectionViewGallery_Example.app/UICollectionViewGallery_Example";
+			};
+			name = Debug;
+		};
+		A19558DD1DE587F500A6E220 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_SUSPICIOUS_MOVES = YES;
+				INFOPLIST_FILE = UICollectionViewGallery_ExampleTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.1;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "MehmedKadir.UICollectionViewGallery-ExampleTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/UICollectionViewGallery_Example.app/UICollectionViewGallery_Example";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -433,6 +548,14 @@
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
+		};
+		A19558DE1DE587F500A6E220 /* Build configuration list for PBXNativeTarget "UICollectionViewGallery_ExampleTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A19558DC1DE587F500A6E220 /* Debug */,
+				A19558DD1DE587F500A6E220 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
 		};
 /* End XCConfigurationList section */
 	};
