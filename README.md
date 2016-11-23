@@ -8,6 +8,8 @@
 ## Demo
 ### Vertical Infiniti Scroll Layout
 ![Gif](https://github.com/ro6lyo/assets/blob/master/scrollVertical.gif)
+
+### Horizontal Infiniti Scroll Layout
 ![Gif](https://github.com/ro6lyo/assets/blob/master/scrollHorizontal.gif)
 
 ## Example
