@@ -5,6 +5,12 @@
 [![Version](https://img.shields.io/cocoapods/v/UICollectionViewGallery.svg?style=flat)](http://cocoapods.org/pods/UICollectionViewGallery)
 [![License](https://img.shields.io/cocoapods/l/UICollectionViewGallery.svg?style=flat)](http://cocoapods.org/pods/UICollectionViewGallery)
 [![Platform](https://img.shields.io/cocoapods/p/UICollectionViewGallery.svg?style=flat)](http://cocoapods.org/pods/UICollectionViewGallery)
+## Demo
+### Vertical Infiniti Scroll Layout
+![Gif](https://github.com/ro6lyo/assets/blob/master/scrollVertical.gif)
+
+### Horizontal Infiniti Scroll Layout
+![Gif](https://github.com/ro6lyo/assets/blob/master/scrollHorizontal.gif)
 
 ## Example
 
