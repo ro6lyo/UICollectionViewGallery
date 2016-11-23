@@ -13,6 +13,7 @@ let MIN_NUMBER_OF_ITEMS_REQUIRED = 6
 
 open class HorizontalFlowLayout: UICollectionViewFlowLayout {
     
+    
     var collectionViewOriginalSize = CGSize.zero
     var used = false
 
