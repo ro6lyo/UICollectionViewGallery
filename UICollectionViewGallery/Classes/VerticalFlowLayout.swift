@@ -9,12 +9,6 @@
 import UIKit
 
 
-
-
-let horizontalLayout = HorizontalFlowLayout()
-
-var currentState:OrientationState = .horizontal
-
 open class VerticalFlowLayout: UICollectionViewFlowLayout {
     
     var collectionViewOriginalSize = CGSize.zero
@@ -25,6 +19,25 @@ open class VerticalFlowLayout: UICollectionViewFlowLayout {
     
     open var scalingOffset: CGFloat = 110
     open var minimumScaleFactor: CGFloat = 0.5
+    
+    //MARK:-Open Functions
+    open func recenterIfNeeded() {
+        guard used && inifiniteScroll && isReachedEndOrBegining() else {return}
+        self.collectionView!.contentOffset = self.preferredContentOffsetForElement(at: 0)
+        
+    }
+    /**
+     Finds current scroll position
+     returns true when it reaches end or begging of the scrollView
+     */
+    private func isReachedEndOrBegining()->Bool {
+        let page = self.collectionView!.contentOffset.y / collectionViewOriginalSize.height
+        let radius = (self.collectionView!.contentOffset.y - trunc(page) * collectionViewOriginalSize.height) / collectionViewOriginalSize.height
+        if radius >= 0.0 && radius <= 0.0002 && page >= self.itemSize.width / 2 + 40 || page < 1.0 {
+            return true
+        }
+        return false
+    }
     
     
     func preferredContentOffsetForElement(at index: Int) -> CGPoint {
@@ -45,24 +58,6 @@ open class VerticalFlowLayout: UICollectionViewFlowLayout {
         return (self.itemSize.height + self.minimumLineSpacing) * CGFloat(index)
     }
     
-    
-    
-    open func recenterIfNeeded() {
-        if used && inifiniteScroll {
-            
-            let page = self.collectionView!.contentOffset.y / collectionViewOriginalSize.height
-            
-            let radius = (self.collectionView!.contentOffset.y - trunc(page) * collectionViewOriginalSize.height) / collectionViewOriginalSize.height
-
-            if radius >= 0.0 && radius <= 0.0002 && page >= self.itemSize.width / 2 + 40 {
-                self.collectionView!.contentOffset = self.preferredContentOffsetForElement(at: 0)
-            }
-            if page < 1.0 {
-                self.collectionView!.contentOffset = self.preferredContentOffsetForElement(at: 0)
-            }
-        }
-    }
-    
     override open func shouldInvalidateLayout(forBoundsChange newBounds: CGRect) -> Bool {
         return true
     }
@@ -78,7 +73,7 @@ open class VerticalFlowLayout: UICollectionViewFlowLayout {
         self.collectionView!.showsVerticalScrollIndicator = false
         super.prepare()
         self.collectionViewOriginalSize = super.collectionViewContentSize
-
+        
     }
     
     
@@ -152,7 +147,7 @@ open class VerticalFlowLayout: UICollectionViewFlowLayout {
         if used == false {
             return super.layoutAttributesForElements(in: rect)!
         }
-       
+        
         let position = rect.origin.y / collectionViewOriginalSize.height
         let rectPosition = position - trunc(position)
         var modifiedRect = CGRect(x: rect.origin.x, y: rectPosition * collectionViewOriginalSize.height, width: rect.size.width, height: rect.size.height)

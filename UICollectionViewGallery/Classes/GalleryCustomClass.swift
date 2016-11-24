@@ -14,6 +14,7 @@ public enum OrientationState {
     case autoFixed        // flow based on inital aspecRatio  eg. height > width = Vertical   heignt < withd = Horizontal
     case autoDynamic      // auto flow based on dynamic aspect ratio: requares orientation change event to be catched
 }
+typealias Gallery = CustomCollectionViewGallery
 
 open class CustomCollectionViewGallery {
     static let sharedInstance = CustomCollectionViewGallery()
@@ -32,44 +33,61 @@ extension UICollectionView {
     
     
     public func setGallery(withStyle style:OrientationState, minLineSpacing:CGFloat,itemSize:CGSize){
-        CustomCollectionViewGallery.sharedInstance.orientation = style
-        CustomCollectionViewGallery.sharedInstance.orintationSupport = false
-        CustomCollectionViewGallery.sharedInstance.verticalLayout.minimumLineSpacing = minLineSpacing
-        CustomCollectionViewGallery.sharedInstance.verticalLayout.itemSize = itemSize
+        Gallery.sharedInstance.orientation = style
+        Gallery.sharedInstance.orintationSupport = false
         
-        CustomCollectionViewGallery.sharedInstance.horizontalLayout.minimumLineSpacing = minLineSpacing
-        CustomCollectionViewGallery.sharedInstance.horizontalLayout.itemSize = itemSize
-       
+        switch style {
+        case .vertical:
+            setUpVerticalFlowLayout(withMinumimLineSpacing: minLineSpacing, andItemSize: itemSize)
+            
+        case .horizontal:
+            setUpHorizontalFlowLayout(withMinumimLineSpacing: minLineSpacing, andItemSize: itemSize)
+            
+        case .autoFixed,.autoDynamic:
+            setUpHorizontalFlowLayout(withMinumimLineSpacing: minLineSpacing, andItemSize: itemSize)
+            setUpVerticalFlowLayout(withMinumimLineSpacing: minLineSpacing, andItemSize: itemSize)
+        }
+        
         self.isPagingEnabled = false
         self.decelerationRate = UIScrollViewDecelerationRateFast
         configureGallery()
     }
     
+    private func setUpVerticalFlowLayout(withMinumimLineSpacing minLineSpacing:CGFloat,andItemSize itemSize:CGSize){
+        Gallery.sharedInstance.verticalLayout.minimumLineSpacing = minLineSpacing
+        Gallery.sharedInstance.verticalLayout.itemSize = itemSize
+    }
+    
+    private func setUpHorizontalFlowLayout(withMinumimLineSpacing minLineSpacing:CGFloat,andItemSize itemSize:CGSize){
+        Gallery.sharedInstance.horizontalLayout.minimumLineSpacing = minLineSpacing
+        Gallery.sharedInstance.horizontalLayout.itemSize = itemSize
+    }
+    
     private func configureGallery(){
-        switch CustomCollectionViewGallery.sharedInstance.orientation {
+        
+        switch Gallery.sharedInstance.orientation {
         case .vertical:
-            self.collectionViewLayout = CustomCollectionViewGallery.sharedInstance.verticalLayout
+            self.collectionViewLayout = Gallery.sharedInstance.verticalLayout
         case .horizontal:
-            self.collectionViewLayout = CustomCollectionViewGallery.sharedInstance.horizontalLayout
+            self.collectionViewLayout = Gallery.sharedInstance.horizontalLayout
             
         case .autoFixed:
             autoLayoutFixed()
             
         case .autoDynamic:
-            CustomCollectionViewGallery.sharedInstance.orintationSupport = true
+            Gallery.sharedInstance.orintationSupport = true
             autoLayoutFixed()
             
         }
-        
     }
     /**
      flow based and inital aspect ratio
      */
     private func autoLayoutFixed(){
         if self.bounds.size.height > self.bounds.size.width {
-            self.collectionViewLayout = CustomCollectionViewGallery.sharedInstance.verticalLayout
+            self.collectionViewLayout = Gallery.sharedInstance.verticalLayout
         }else {
-            self.collectionViewLayout = CustomCollectionViewGallery.sharedInstance.horizontalLayout
+            self.collectionViewLayout = Gallery.sharedInstance.horizontalLayout
         }
     }
     
@@ -79,18 +97,18 @@ extension UICollectionView {
      flow based on device orientation
      */
     public func changeOrientation(){
-        guard CustomCollectionViewGallery.sharedInstance.orintationSupport else {return}
+        guard Gallery.sharedInstance.orintationSupport else {return}
         print(self.bounds.size)
         if self.collectionViewLayout.isKind(of: VerticalFlowLayout.self) && self.bounds.size.height > self.bounds.size.width {
             UIView.animate(withDuration: 0.2) { () -> Void in
                 self.collectionViewLayout.invalidateLayout()
-                self.setCollectionViewLayout(CustomCollectionViewGallery.sharedInstance.horizontalLayout, animated: false)
+                self.setCollectionViewLayout(Gallery.sharedInstance.horizontalLayout, animated: false)
             }
             
         } else if self.collectionViewLayout.isKind(of: HorizontalFlowLayout.self) && self.bounds.size.width > self.bounds.size.height {
             UIView.animate(withDuration: 0.2) { () -> Void in
                 self.collectionViewLayout.invalidateLayout()
-                self.setCollectionViewLayout(CustomCollectionViewGallery.sharedInstance.verticalLayout, animated: false)
+                self.setCollectionViewLayout(Gallery.sharedInstance.verticalLayout, animated: false)
             }
             
         }

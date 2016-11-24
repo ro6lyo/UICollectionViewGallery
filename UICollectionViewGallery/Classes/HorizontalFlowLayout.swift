@@ -2,7 +2,7 @@
 //  InfiniteScrollingLayout.swift
 //  Pods
 //
-//  Created by Paulina Simeonova on 11/21/16.
+//  Created by Mehmed Kadir on 11/21/16.
 //
 //
 
@@ -10,23 +10,37 @@ import UIKit
 
 let MIN_NUMBER_OF_ITEMS_REQUIRED = 6
 
-
 open class HorizontalFlowLayout: UICollectionViewFlowLayout {
-    
-    
     
     var collectionViewOriginalSize = CGSize.zero
     var used = false
     
-    
     open var inifiniteScroll = true   //  can be changed based on requared behaviour
     open var scaleElements = true     //  can be changed based on requared behaviour
-
+    
     open var scalingOffset: CGFloat = 110
     open var minimumScaleFactor: CGFloat = 0.5
-
- 
-    func preferredContentOffsetForElement(at index: Int) -> CGPoint {
+    //MARK:-Open Functions
+    open func recenterIfNeeded() {
+        guard used && inifiniteScroll && isReachedEndOrBegining() else {return}
+        self.collectionView!.contentOffset = self.preferredContentOffsetForElement(at: 0)
+        
+    }
+    /**
+     Finds current scroll position
+     returns true when it reaches end or begging of the scrollView
+     */
+    private func isReachedEndOrBegining()->Bool {
+        let page = self.collectionView!.contentOffset.x / collectionViewOriginalSize.width
+        let radius = (self.collectionView!.contentOffset.x - trunc(page) * collectionViewOriginalSize.width) / collectionViewOriginalSize.width
+        if radius >= 0.0 && radius <= 0.0002 && page >= self.itemSize.width / 2 + 40 || page < 1.0 {
+        return true
+        }
+        return false
+    }
+    
+    
+  private  func preferredContentOffsetForElement(at index: Int) -> CGPoint {
         guard self.collectionView!.numberOfItems(inSection: 0) > 0 else { return CGPoint(x: CGFloat(0), y: CGFloat(0)) }
         
         var value = item(at: index)
@@ -36,39 +50,15 @@ open class HorizontalFlowLayout: UICollectionViewFlowLayout {
         return CGPoint(x:value - self.collectionView!.contentInset.left, y: self.collectionView!.contentOffset.y)
     }
     
-    
     private func item(at index: Int) -> CGFloat{
         return self.itemSize.width + (self.minimumLineSpacing * CGFloat(index))
     }
     
-    
-    
-    open func recenterIfNeeded() {
-        if used && inifiniteScroll {
-            
-            let page = self.collectionView!.contentOffset.x / collectionViewOriginalSize.width
-            let residue = (self.collectionView!.contentOffset.x - trunc(page) * collectionViewOriginalSize.width) / collectionViewOriginalSize.width
-        
-
-            if residue >= 0.0 && residue <= 0.0002 && page >= self.itemSize.width / 2 + 40 {
-                
-                self.collectionView!.contentOffset = self.preferredContentOffsetForElement(at: 0)
-                
-            }
-            if page < 1.0 {
-                self.collectionView!.contentOffset = self.preferredContentOffsetForElement(at: 0)
-            }
-        }
-    }
-    
-    
+ 
     
     override open func shouldInvalidateLayout(forBoundsChange newBounds: CGRect) -> Bool {
         return true
     }
-    
-    
-    
     
     override open func prepare() {
         
@@ -80,12 +70,7 @@ open class HorizontalFlowLayout: UICollectionViewFlowLayout {
         self.collectionView!.showsVerticalScrollIndicator = false
         super.prepare()
         self.collectionViewOriginalSize = super.collectionViewContentSize
-        
-
-
     }
-    
-    
     
     override open var collectionViewContentSize: CGSize {
         var size: CGSize
@@ -176,18 +161,18 @@ open class HorizontalFlowLayout: UICollectionViewFlowLayout {
         return super.layoutAttributesForItem(at: indexPath)!
     }
     
-    func newAttributes(for rect: CGRect, offset: CGFloat) -> [UICollectionViewLayoutAttributes] {
+  private  func newAttributes(for rect: CGRect, offset: CGFloat) -> [UICollectionViewLayoutAttributes] {
         let attributes = super.layoutAttributesForElements(in: rect)
         return self.modifyLayoutAttributes(attributes!, offset: offset)
     }
     
-    func modifyLayoutAttributes(_ attributes: [UICollectionViewLayoutAttributes], offset: CGFloat) -> [UICollectionViewLayoutAttributes] {
+   private func modifyLayoutAttributes(_ attributes: [UICollectionViewLayoutAttributes], offset: CGFloat) -> [UICollectionViewLayoutAttributes] {
         var isResult = [UICollectionViewLayoutAttributes]()
         let contentOffset = self.collectionView!.contentOffset
         let size = self.collectionView!.bounds.size
         
         let visibleRect = CGRect(x: contentOffset.x, y: contentOffset.y, width: size.width, height: size.height)
-        let visibleCenterX = visibleRect.midX // 226907.5
+        let visibleCenterX = visibleRect.midX
         
         for attr in attributes {
             let newAttr = attr

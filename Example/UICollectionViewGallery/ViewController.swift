@@ -9,18 +9,11 @@
 import UIKit
 import UICollectionViewGallery
 
-
-
-
-
 class ViewController: UIViewController {
-    
     
     @IBOutlet weak var galleryCollectionView: UICollectionView!
     
     var stringArray: [String] = ["1", "2", "3", "4", "5", "6", "7", "8", "9", "10"]
-    
-    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -29,25 +22,18 @@ class ViewController: UIViewController {
         configureGallery()
     }
     
-    
     func configureGallery() {
-       
-        galleryCollectionView.setGallery(withStyle: .autoFixed, minLineSpacing: 10, itemSize: CGSize(width: 200, height: 200))
-      
+        galleryCollectionView.setGallery(withStyle: .autoDynamic, minLineSpacing: 10, itemSize: CGSize(width: 200, height: 200))
     }
     
     override func willRotate(to toInterfaceOrientation: UIInterfaceOrientation, duration: TimeInterval) {
         switch toInterfaceOrientation {
         case .landscapeLeft,.landscapeRight:
         galleryCollectionView.changeOrientation()
-            
         case .portrait,.portraitUpsideDown,.unknown:
             galleryCollectionView.changeOrientation()
-
         }
     }
-    
-    
 }
 //
 // MARK: - UICollectionViewDataSource, UICollectionViewDelegate
@@ -64,11 +50,9 @@ extension ViewController: UICollectionViewDataSource, UICollectionViewDelegate {
         return cell
     }
     
-    
     func scrollViewDidScroll(_ scrollView: UIScrollView) {
         galleryCollectionView.recenterIfNeeded()
     }
-    
 }
 
 class customCell :UICollectionViewCell {
