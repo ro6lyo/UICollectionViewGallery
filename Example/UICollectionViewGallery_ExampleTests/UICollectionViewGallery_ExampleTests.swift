@@ -2,12 +2,11 @@
 //  UICollectionViewGallery_ExampleTests.swift
 //  UICollectionViewGallery_ExampleTests
 //
-//  Created by Mehmed Kadir on 11/23/16.
+//  Created by Paulina Simeonova on 11/23/16.
 //  Copyright © 2016 CocoaPods. All rights reserved.
 //
 
 import XCTest
-
 
 class UICollectionViewGallery_ExampleTests: XCTestCase {
     
