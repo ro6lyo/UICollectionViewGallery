@@ -64,6 +64,8 @@
 		A19559391DE82DAA00A6E220 /* UICollectionViewGalleryTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = UICollectionViewGalleryTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		A195593B1DE82DAA00A6E220 /* UICollectionViewGalleryTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UICollectionViewGalleryTests.swift; sourceTree = "<group>"; };
 		A195593D1DE82DAA00A6E220 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A195594A1DE8308700A6E220 /* Pods_UICollectionViewGallery_ExampleTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Pods_UICollectionViewGallery_ExampleTests.swift; sourceTree = "<group>"; };
+		A195594C1DE8308700A6E220 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B4C866B55B215FE17284413ECF992C37 /* UICollectionViewGallery.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = UICollectionViewGallery.xcconfig; sourceTree = "<group>"; };
 		B5EF892FC78BCB43E8590C773F62C36A /* Pods-UICollectionViewGallery_Example.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = "Pods-UICollectionViewGallery_Example.modulemap"; sourceTree = "<group>"; };
 		B788D23EC0B1948CF42CF835B9E5488A /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -195,6 +197,7 @@
 				93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */,
 				9281271BFCC146CC5E1EBC4C9B89C860 /* Development Pods */,
 				A195593A1DE82DAA00A6E220 /* UICollectionViewGalleryTests */,
+				A19559491DE8308700A6E220 /* Pods_UICollectionViewGallery_ExampleTests */,
 				BC3CA7F9E30CC8F7E2DD044DD34432FC /* Frameworks */,
 				8E7DC00EBD2AB00FD8A75C81B165A2C7 /* Products */,
 				1E335673FFC74B4C66ED78039A659215 /* Targets Support Files */,
@@ -226,6 +229,15 @@
 				A195593D1DE82DAA00A6E220 /* Info.plist */,
 			);
 			path = UICollectionViewGalleryTests;
+			sourceTree = "<group>";
+		};
+		A19559491DE8308700A6E220 /* Pods_UICollectionViewGallery_ExampleTests */ = {
+			isa = PBXGroup;
+			children = (
+				A195594A1DE8308700A6E220 /* Pods_UICollectionViewGallery_ExampleTests.swift */,
+				A195594C1DE8308700A6E220 /* Info.plist */,
+			);
+			path = Pods_UICollectionViewGallery_ExampleTests;
 			sourceTree = "<group>";
 		};
 		BC3CA7F9E30CC8F7E2DD044DD34432FC /* Frameworks */ = {
@@ -732,6 +744,7 @@
 				A19559421DE82DAA00A6E220 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		F0F9563B9F8C47ACDD7B05A39D6E45A2 /* Build configuration list for PBXNativeTarget "Pods-UICollectionViewGallery_Example" */ = {
 			isa = XCConfigurationList;
