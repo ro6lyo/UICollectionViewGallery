@@ -17,7 +17,7 @@
                BlueprintIdentifier = "607FACCF1AFB9204008FA782"
                BuildableName = "UICollectionViewGallery_Example.app"
                BlueprintName = "UICollectionViewGallery_Example"
-               ReferencedContainer = "container:UICollectionViewGallery.xcodeproj">
+               ReferencedContainer = "container:../UICollectionViewGallery.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
          <BuildActionEntry
@@ -31,7 +31,7 @@
                BlueprintIdentifier = "607FACE41AFB9204008FA782"
                BuildableName = "UICollectionViewGallery_Tests.xctest"
                BlueprintName = "UICollectionViewGallery_Tests"
-               ReferencedContainer = "container:UICollectionViewGallery.xcodeproj">
+               ReferencedContainer = "container:../UICollectionViewGallery.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
          <BuildActionEntry
@@ -45,7 +45,7 @@
                BlueprintIdentifier = "B8EBD8F21C99833EA1BB0DC067E5482E"
                BuildableName = "Pods_UICollectionViewGallery_Example.framework"
                BlueprintName = "Pods-UICollectionViewGallery_Example"
-               ReferencedContainer = "container:Pods/Pods.xcodeproj">
+               ReferencedContainer = "container:Pods.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
          <BuildActionEntry
@@ -59,7 +59,7 @@
                BlueprintIdentifier = "518187163336044DC1E7729477EE8790"
                BuildableName = "Pods_UICollectionViewGallery_Tests.framework"
                BlueprintName = "Pods-UICollectionViewGallery_Tests"
-               ReferencedContainer = "container:Pods/Pods.xcodeproj">
+               ReferencedContainer = "container:Pods.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
          <BuildActionEntry
@@ -73,7 +73,7 @@
                BlueprintIdentifier = "9CF7EF48179270A2895B6A66AD5837A8"
                BuildableName = "UICollectionViewGallery.framework"
                BlueprintName = "UICollectionViewGallery"
-               ReferencedContainer = "container:Pods/Pods.xcodeproj">
+               ReferencedContainer = "container:Pods.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -91,7 +91,7 @@
                BlueprintIdentifier = "607FACE41AFB9204008FA782"
                BuildableName = "UICollectionViewGallery_Tests.xctest"
                BlueprintName = "UICollectionViewGallery_Tests"
-               ReferencedContainer = "container:UICollectionViewGallery.xcodeproj">
+               ReferencedContainer = "container:../UICollectionViewGallery.xcodeproj">
             </BuildableReference>
          </TestableReference>
          <TestableReference
@@ -101,7 +101,7 @@
                BlueprintIdentifier = "A19558D41DE587F500A6E220"
                BuildableName = "UICollectionViewGallery_ExampleTests.xctest"
                BlueprintName = "UICollectionViewGallery_ExampleTests"
-               ReferencedContainer = "container:UICollectionViewGallery.xcodeproj">
+               ReferencedContainer = "container:../UICollectionViewGallery.xcodeproj">
             </BuildableReference>
          </TestableReference>
       </Testables>
@@ -111,7 +111,7 @@
             BlueprintIdentifier = "607FACCF1AFB9204008FA782"
             BuildableName = "UICollectionViewGallery_Example.app"
             BlueprintName = "UICollectionViewGallery_Example"
-            ReferencedContainer = "container:UICollectionViewGallery.xcodeproj">
+            ReferencedContainer = "container:../UICollectionViewGallery.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
       <AdditionalOptions>
@@ -134,7 +134,7 @@
             BlueprintIdentifier = "607FACCF1AFB9204008FA782"
             BuildableName = "UICollectionViewGallery_Example.app"
             BlueprintName = "UICollectionViewGallery_Example"
-            ReferencedContainer = "container:UICollectionViewGallery.xcodeproj">
+            ReferencedContainer = "container:../UICollectionViewGallery.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
       <EnvironmentVariables>
@@ -160,7 +160,7 @@
             BlueprintIdentifier = "607FACCF1AFB9204008FA782"
             BuildableName = "UICollectionViewGallery_Example.app"
             BlueprintName = "UICollectionViewGallery_Example"
-            ReferencedContainer = "container:UICollectionViewGallery.xcodeproj">
+            ReferencedContainer = "container:../UICollectionViewGallery.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </ProfileAction>
