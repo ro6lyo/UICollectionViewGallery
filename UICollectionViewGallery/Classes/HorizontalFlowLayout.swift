@@ -1,5 +1,5 @@
 //
-//  HorizontalFlowLayout.swift
+//  InfiniteScrollingLayout.swift
 //  Pods
 //
 //  Created by Mehmed Kadir on 11/21/16.

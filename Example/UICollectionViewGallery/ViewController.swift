@@ -23,22 +23,20 @@ class ViewController: UIViewController {
     }
     
     func configureGallery() {
-    // galleryCollectionView.setGalleryBehavior(forInfiniteScroll: false, andScaleElements: false) // diasbles infinite scroll and scaleEfect
-        galleryCollectionView.setGallery(forLayout: .vertical, minLineSpacing: 10, itemSize: CGSize(width: 200, height:200), minScaleFactor: 0.5) // custom layout
-        galleryCollectionView.setGallery(forLayout: .horizontal, minLineSpacing: 20, itemSize: CGSize(width: 300, height:300), minScaleFactor: 0.5) // custom layout
+        galleryCollectionView.setGallery(forLayout: .vertical, minLineSpacing: 10, itemSize: CGSize(width: 200, height:200), minScaleFactor: 0.5)
+        galleryCollectionView.setGallery(forLayout: .horizontal, minLineSpacing: 20, itemSize: CGSize(width: 300, height:300), minScaleFactor: 0.5)
 
-        galleryCollectionView.setGalleryWithCustomFlows(andStyle: .autoDynamic) // should be called after custom layout
+        galleryCollectionView.setGalleryWithCustomFlows(andStyle: .autoDynamic)
         
-        
-        //galleryCollectionView.setGallery(withStyle: .autoDynamic, minLineSpacing: 10, itemSize: CGSize(width: 200, height: 200),minScaleFactor:0.2) // standart implementation
+        //galleryCollectionView.setGallery(withStyle: .autoDynamic, minLineSpacing: 10, itemSize: CGSize(width: 200, height: 200),minScaleFactor:0.2)
     }
     
     override func willRotate(to toInterfaceOrientation: UIInterfaceOrientation, duration: TimeInterval) {
         switch toInterfaceOrientation {
         case .landscapeLeft,.landscapeRight:
-            galleryCollectionView.changeOrientation() // you need to call it in order for customLayout to receive orienatation change event
+        galleryCollectionView.changeOrientation()
         case .portrait,.portraitUpsideDown,.unknown:
-            galleryCollectionView.changeOrientation() // you need to call it in order for customLayout to receive orienatation change event
+            galleryCollectionView.changeOrientation()
         }
     }
 }
