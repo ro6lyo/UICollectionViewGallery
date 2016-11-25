@@ -13,11 +13,11 @@
 		607FACDD1AFB9204008FA782 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 607FACDC1AFB9204008FA782 /* Images.xcassets */; };
 		607FACE01AFB9204008FA782 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 607FACDE1AFB9204008FA782 /* LaunchScreen.xib */; };
 		6757A7E806CDA17D8001BDBF /* Pods_UICollectionViewGallery_Example.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 07EBD968658DF5C71AC8E51B /* Pods_UICollectionViewGallery_Example.framework */; };
-		A19558D81DE587F500A6E220 /* UICollectionViewGallery_ExampleTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A19558D71DE587F500A6E220 /* UICollectionViewGallery_ExampleTests.swift */; };
+		A195592E1DE82D6900A6E220 /* UICollectionViewGallery_ExampleTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A195592D1DE82D6900A6E220 /* UICollectionViewGallery_ExampleTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		A19558DA1DE587F500A6E220 /* PBXContainerItemProxy */ = {
+		A19559301DE82D6900A6E220 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 607FACC81AFB9204008FA782 /* Project object */;
 			proxyType = 1;
@@ -39,9 +39,9 @@
 		607FACDC1AFB9204008FA782 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		607FACDF1AFB9204008FA782 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
 		7C5824756A6DFE014609452F /* Pods-UICollectionViewGallery_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-UICollectionViewGallery_Tests.release.xcconfig"; path = "Pods/Target Support Files/Pods-UICollectionViewGallery_Tests/Pods-UICollectionViewGallery_Tests.release.xcconfig"; sourceTree = "<group>"; };
-		A19558D51DE587F500A6E220 /* UICollectionViewGallery_ExampleTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = UICollectionViewGallery_ExampleTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		A19558D71DE587F500A6E220 /* UICollectionViewGallery_ExampleTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UICollectionViewGallery_ExampleTests.swift; sourceTree = "<group>"; };
-		A19558D91DE587F500A6E220 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A195592B1DE82D6900A6E220 /* UICollectionViewGallery_ExampleTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = UICollectionViewGallery_ExampleTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		A195592D1DE82D6900A6E220 /* UICollectionViewGallery_ExampleTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UICollectionViewGallery_ExampleTests.swift; sourceTree = "<group>"; };
+		A195592F1DE82D6900A6E220 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		AB8301E90C9DDCC09901714D /* Pods-UICollectionViewGallery_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-UICollectionViewGallery_Example.debug.xcconfig"; path = "Pods/Target Support Files/Pods-UICollectionViewGallery_Example/Pods-UICollectionViewGallery_Example.debug.xcconfig"; sourceTree = "<group>"; };
 		C13DEAE863E475734ACC88E1 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
 		DA674D2CEB21C0A9B300A1EB /* Pods_UICollectionViewGallery_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_UICollectionViewGallery_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -57,7 +57,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		A19558D21DE587F500A6E220 /* Frameworks */ = {
+		A19559281DE82D6900A6E220 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -83,7 +83,7 @@
 			children = (
 				607FACF51AFB993E008FA782 /* Podspec Metadata */,
 				607FACD21AFB9204008FA782 /* Example for UICollectionViewGallery */,
-				A19558D61DE587F500A6E220 /* UICollectionViewGallery_ExampleTests */,
+				A195592C1DE82D6900A6E220 /* UICollectionViewGallery_ExampleTests */,
 				607FACD11AFB9204008FA782 /* Products */,
 				4B6BB006F6EC1DF4F310B42F /* Pods */,
 				8562E78683317C6A380E9928 /* Frameworks */,
@@ -94,7 +94,7 @@
 			isa = PBXGroup;
 			children = (
 				607FACD01AFB9204008FA782 /* UICollectionViewGallery_Example.app */,
-				A19558D51DE587F500A6E220 /* UICollectionViewGallery_ExampleTests.xctest */,
+				A195592B1DE82D6900A6E220 /* UICollectionViewGallery_ExampleTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -140,11 +140,11 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		A19558D61DE587F500A6E220 /* UICollectionViewGallery_ExampleTests */ = {
+		A195592C1DE82D6900A6E220 /* UICollectionViewGallery_ExampleTests */ = {
 			isa = PBXGroup;
 			children = (
-				A19558D71DE587F500A6E220 /* UICollectionViewGallery_ExampleTests.swift */,
-				A19558D91DE587F500A6E220 /* Info.plist */,
+				A195592D1DE82D6900A6E220 /* UICollectionViewGallery_ExampleTests.swift */,
+				A195592F1DE82D6900A6E220 /* Info.plist */,
 			);
 			path = UICollectionViewGallery_ExampleTests;
 			sourceTree = "<group>";
@@ -172,22 +172,22 @@
 			productReference = 607FACD01AFB9204008FA782 /* UICollectionViewGallery_Example.app */;
 			productType = "com.apple.product-type.application";
 		};
-		A19558D41DE587F500A6E220 /* UICollectionViewGallery_ExampleTests */ = {
+		A195592A1DE82D6900A6E220 /* UICollectionViewGallery_ExampleTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = A19558DE1DE587F500A6E220 /* Build configuration list for PBXNativeTarget "UICollectionViewGallery_ExampleTests" */;
+			buildConfigurationList = A19559321DE82D6900A6E220 /* Build configuration list for PBXNativeTarget "UICollectionViewGallery_ExampleTests" */;
 			buildPhases = (
-				A19558D11DE587F500A6E220 /* Sources */,
-				A19558D21DE587F500A6E220 /* Frameworks */,
-				A19558D31DE587F500A6E220 /* Resources */,
+				A19559271DE82D6900A6E220 /* Sources */,
+				A19559281DE82D6900A6E220 /* Frameworks */,
+				A19559291DE82D6900A6E220 /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				A19558DB1DE587F500A6E220 /* PBXTargetDependency */,
+				A19559311DE82D6900A6E220 /* PBXTargetDependency */,
 			);
 			name = UICollectionViewGallery_ExampleTests;
 			productName = UICollectionViewGallery_ExampleTests;
-			productReference = A19558D51DE587F500A6E220 /* UICollectionViewGallery_ExampleTests.xctest */;
+			productReference = A195592B1DE82D6900A6E220 /* UICollectionViewGallery_ExampleTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
 /* End PBXNativeTarget section */
@@ -205,7 +205,7 @@
 						DevelopmentTeam = UG327W9DM7;
 						LastSwiftMigration = 0810;
 					};
-					A19558D41DE587F500A6E220 = {
+					A195592A1DE82D6900A6E220 = {
 						CreatedOnToolsVersion = 8.1;
 						ProvisioningStyle = Automatic;
 						TestTargetID = 607FACCF1AFB9204008FA782;
@@ -226,7 +226,7 @@
 			projectRoot = "";
 			targets = (
 				607FACCF1AFB9204008FA782 /* UICollectionViewGallery_Example */,
-				A19558D41DE587F500A6E220 /* UICollectionViewGallery_ExampleTests */,
+				A195592A1DE82D6900A6E220 /* UICollectionViewGallery_ExampleTests */,
 			);
 		};
 /* End PBXProject section */
@@ -242,7 +242,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		A19558D31DE587F500A6E220 /* Resources */ = {
+		A19559291DE82D6900A6E220 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -309,21 +309,21 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		A19558D11DE587F500A6E220 /* Sources */ = {
+		A19559271DE82D6900A6E220 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A19558D81DE587F500A6E220 /* UICollectionViewGallery_ExampleTests.swift in Sources */,
+				A195592E1DE82D6900A6E220 /* UICollectionViewGallery_ExampleTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		A19558DB1DE587F500A6E220 /* PBXTargetDependency */ = {
+		A19559311DE82D6900A6E220 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = 607FACCF1AFB9204008FA782 /* UICollectionViewGallery_Example */;
-			targetProxy = A19558DA1DE587F500A6E220 /* PBXContainerItemProxy */;
+			targetProxy = A19559301DE82D6900A6E220 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -472,7 +472,7 @@
 			};
 			name = Release;
 		};
-		A19558DC1DE587F500A6E220 /* Debug */ = {
+		A19559331DE82D6900A6E220 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -491,7 +491,7 @@
 			};
 			name = Debug;
 		};
-		A19558DD1DE587F500A6E220 /* Release */ = {
+		A19559341DE82D6900A6E220 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -529,14 +529,13 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		A19558DE1DE587F500A6E220 /* Build configuration list for PBXNativeTarget "UICollectionViewGallery_ExampleTests" */ = {
+		A19559321DE82D6900A6E220 /* Build configuration list for PBXNativeTarget "UICollectionViewGallery_ExampleTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				A19558DC1DE587F500A6E220 /* Debug */,
-				A19558DD1DE587F500A6E220 /* Release */,
+				A19559331DE82D6900A6E220 /* Debug */,
+				A19559341DE82D6900A6E220 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
