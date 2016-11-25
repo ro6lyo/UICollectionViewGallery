@@ -35,6 +35,9 @@ open class CustomCollectionViewGallery {
     
     var orientation:OrientationState = .autoDynamic
     var orintationSupport = false
+    
+    open var inifiniteScroll = true   //  can be changed based on requared behaviour
+    open var scaleElements = true    //  can be changed based on requared behaviour
 }
 
 extension UICollectionView {
@@ -118,6 +121,14 @@ extension UICollectionView {
             
         }
     }
+    /**
+     use it if you want to dissable infinite scroll or scaling elements 
+     default implementation for both properties is TRUE
+     */
+    public func setGalleryBehavior(forInfiniteScroll shouldScroll:Bool,andScaleElements shouldScale:Bool) {
+        Gallery.sharedInstance.inifiniteScroll = shouldScroll
+        Gallery.sharedInstance.scaleElements = shouldScale
+    }
     //
     //MARK:- Private Functions
     //
@@ -125,12 +136,18 @@ extension UICollectionView {
         Gallery.sharedInstance.verticalLayout.minimumLineSpacing = minLineSpacing
         Gallery.sharedInstance.verticalLayout.itemSize = itemSize
         Gallery.sharedInstance.verticalLayout.minimumScaleFactor = scaleFactor
+        Gallery.sharedInstance.verticalLayout.inifiniteScroll = Gallery.sharedInstance.inifiniteScroll
+        Gallery.sharedInstance.verticalLayout.scaleElements = Gallery.sharedInstance.scaleElements
+
     }
     
     private func setUpHorizontalFlowLayout(withMinumimLineSpacing minLineSpacing:CGFloat,andItemSize itemSize:CGSize,minScaleFactor scaleFactor:CGFloat){
         Gallery.sharedInstance.horizontalLayout.minimumLineSpacing = minLineSpacing
         Gallery.sharedInstance.horizontalLayout.itemSize = itemSize
         Gallery.sharedInstance.horizontalLayout.minimumScaleFactor = scaleFactor
+        Gallery.sharedInstance.horizontalLayout.inifiniteScroll = Gallery.sharedInstance.inifiniteScroll
+        Gallery.sharedInstance.verticalLayout.scaleElements = Gallery.sharedInstance.scaleElements
+
     }
     
     private func configureGallery(){

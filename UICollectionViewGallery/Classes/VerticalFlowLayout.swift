@@ -1,5 +1,5 @@
 //
-//  File.swift
+//  VerticalFlowLayout.swift
 //  Pods
 //
 //  Created by Mehmed Kadir on 11/22/16.
