@@ -32,7 +32,6 @@ open class VerticalFlowLayout: UICollectionViewFlowLayout {
     }
     
     override open func prepare() {
-        
         assert(self.collectionView!.numberOfSections <= 1, "You cannot use UICollectionViewGallery with more than 2 sections")
         self.used = self.collectionView!.numberOfItems(inSection: 0) >= MIN_NUMBER_OF_ITEMS_REQUIRED
         self.scrollDirection = .vertical

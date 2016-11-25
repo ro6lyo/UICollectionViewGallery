@@ -20,6 +20,7 @@ class UICollectionViewGallery_ExampleTests: XCTestCase {
         // Put teardown code here. This method is called after the invocation of each test method in the class.
         super.tearDown()
     }
+    
     /**
      test .autoFixed layout
      */
@@ -40,9 +41,10 @@ class UICollectionViewGallery_ExampleTests: XCTestCase {
         XCTAssertTrue(vertical.collectionViewLayout.isKind(of: VerticalFlowLayout.self))
         XCTAssertTrue(horizontal.collectionViewLayout.isKind(of: HorizontalFlowLayout.self))
     }
-    
+   
     func test_AutoDynamicLayout(){
         let dynamic = UICollectionView(frame: CGRect(x: 0, y: 0, width: 100, height: 20), collectionViewLayout: Gallery.sharedInstance.horizontalLayout)
+        dynamic.collectionViewLayout = Gallery.sharedInstance.verticalLayout
         
         dynamic.setGallery(withStyle: .autoDynamic, minLineSpacing: 10, itemSize: CGSize(width:30, height:30), minScaleFactor: 0.5)
         XCTAssertTrue(dynamic.collectionViewLayout.isKind(of: HorizontalFlowLayout.self))
@@ -71,7 +73,19 @@ class UICollectionViewGallery_ExampleTests: XCTestCase {
         XCTAssertTrue(horizontal.collectionViewLayout.isKind(of: HorizontalFlowLayout.self))
         
     }
+    func test_CustomLayout() {
+        let custom = UICollectionView(frame: CGRect(x: 0, y: 0, width: 20, height: 100), collectionViewLayout: Gallery.sharedInstance.verticalLayout)
+       
+        custom.setGallery(forLayout: .horizontal, minLineSpacing: 10, itemSize: CGSize(width:30, height:30), minScaleFactor: 0.5)
+        custom.setGallery(forLayout: .vertical, minLineSpacing: 10, itemSize: CGSize(width:50, height:50), minScaleFactor: 0.5)
+
+        custom.setGalleryWithCustomFlows(andStyle: .autoDynamic)
+        
+        XCTAssertTrue(Gallery.sharedInstance.horizontalLayout.itemSize == CGSize(width:30, height:30))
+        XCTAssertTrue(Gallery.sharedInstance.verticalLayout.itemSize == CGSize(width:50, height:50))
+
     
+    }
     
     
     func testPerformanceExample() {
