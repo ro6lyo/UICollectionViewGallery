@@ -5,5 +5,7 @@ target 'UICollectionViewGallery_Example' do
 
   target 'UICollectionViewGallery_Tests' do
     inherit! :search_paths
+
+    
   end
 end
