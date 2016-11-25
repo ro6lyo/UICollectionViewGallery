@@ -3,9 +3,7 @@ use_frameworks!
 target 'UICollectionViewGallery_Example' do
   pod 'UICollectionViewGallery', :path => '../'
 
-  target 'UICollectionViewGallery_Tests' do
+  target 'UICollectionViewGallery_ExampleTests' do
     inherit! :search_paths
-
-    
   end
 end
