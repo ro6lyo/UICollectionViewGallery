@@ -2,11 +2,13 @@
 //  Pods_UICollectionViewGallery_ExampleTests.swift
 //  Pods_UICollectionViewGallery_ExampleTests
 //
-//  Created by Paulina Simeonova on 11/23/16.
+//  Created by Mehmed Kadir on 11/23/16.
 //
 //
 
 import XCTest
+import UIKit
+import Foundation
 
 class Pods_UICollectionViewGallery_ExampleTests: XCTestCase {
     
@@ -20,10 +22,20 @@ class Pods_UICollectionViewGallery_ExampleTests: XCTestCase {
         super.tearDown()
     }
     
-    func testExample() {
-        // This is an example of a functional test case.
-        // Use XCTAssert and related functions to verify your tests produce the correct results.
+    func testCreateVerticalScrollGallery(){
+        
+        let gallery = UICollectionView()
+        gallery.frame.size.width = 100
+        gallery.frame.size.height = 200
+        
+        
     }
+    
+    
+    
+    
+    
+    
     
     func testPerformanceExample() {
         // This is an example of a performance test case.
