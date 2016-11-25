@@ -99,7 +99,7 @@
             skipped = "NO">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "A195592A1DE82D6900A6E220"
+               BlueprintIdentifier = "A19558D41DE587F500A6E220"
                BuildableName = "UICollectionViewGallery_ExampleTests.xctest"
                BlueprintName = "UICollectionViewGallery_ExampleTests"
                ReferencedContainer = "container:UICollectionViewGallery.xcodeproj">
