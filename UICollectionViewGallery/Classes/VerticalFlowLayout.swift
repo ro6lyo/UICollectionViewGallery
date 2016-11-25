@@ -106,9 +106,9 @@ open class VerticalFlowLayout: UICollectionViewFlowLayout {
         }
         let attributes = self.newAttributes(for: modifiedRect, offset: trunc(position) * collectionViewOriginalSize.height)
         let attributes2 = self.newAttributes(for: secondRect, offset: (trunc(position) + 1) * collectionViewOriginalSize.height)
-        let isResult = attributes + attributes2
+        guard inifiniteScroll else { return attributes}
+        return attributes + attributes2
         
-        return isResult
     }
     
     override open func layoutAttributesForItem(at indexPath: IndexPath) -> UICollectionViewLayoutAttributes {
@@ -167,6 +167,9 @@ open class VerticalFlowLayout: UICollectionViewFlowLayout {
     
         newAttr.center = CGPoint(x: newAttr.center.x , y: newAttr.center.y + offset)
         let absDistanceFromCenter = min(abs(center - newAttr.center.y), self.scalingOffset)
+
+        guard scaleElements else {return newAttr}
+
         let scale = absDistanceFromCenter * (self.minimumScaleFactor - 1) / self.scalingOffset + 1
         newAttr.transform3D = CATransform3DScale(CATransform3DIdentity, scale, scale, 1)
         

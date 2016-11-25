@@ -35,6 +35,9 @@ open class CustomCollectionViewGallery {
     
     var orientation:OrientationState = .autoDynamic
     var orintationSupport = false
+    
+    open var shouldScrollInfinite = true   //  can be changed based on requared behaviour
+    open var shouldScale = true     //  can be changed based on requared behaviour
 }
 
 extension UICollectionView {
@@ -89,7 +92,10 @@ extension UICollectionView {
      */
     public func changeOrientation(){
         guard Gallery.sharedInstance.orintationSupport else {return}
-        print(self.bounds.size)
+        
+        print("width is  - >\(self.bounds.size.width)")
+        print("hieght is - >\(self.bounds.size.height)")
+
         if self.collectionViewLayout.isKind(of: VerticalFlowLayout.self) && self.bounds.size.height > self.bounds.size.width {
             UIView.animate(withDuration: 0.2) { () -> Void in
                 self.collectionViewLayout.invalidateLayout()
@@ -118,6 +124,10 @@ extension UICollectionView {
             
         }
     }
+    public func setGaleryBehavior(forInfiniteScroll shouldScroll:Bool, andScalingElemnts shouldScale:Bool){
+        Gallery.sharedInstance.shouldScrollInfinite = shouldScroll
+        Gallery.sharedInstance.shouldScale = shouldScale
+    }
     //
     //MARK:- Private Functions
     //
@@ -125,12 +135,16 @@ extension UICollectionView {
         Gallery.sharedInstance.verticalLayout.minimumLineSpacing = minLineSpacing
         Gallery.sharedInstance.verticalLayout.itemSize = itemSize
         Gallery.sharedInstance.verticalLayout.minimumScaleFactor = scaleFactor
+        Gallery.sharedInstance.verticalLayout.inifiniteScroll = Gallery.sharedInstance.shouldScrollInfinite
+        Gallery.sharedInstance.verticalLayout.scaleElements = Gallery.sharedInstance.shouldScale
     }
     
     private func setUpHorizontalFlowLayout(withMinumimLineSpacing minLineSpacing:CGFloat,andItemSize itemSize:CGSize,minScaleFactor scaleFactor:CGFloat){
         Gallery.sharedInstance.horizontalLayout.minimumLineSpacing = minLineSpacing
         Gallery.sharedInstance.horizontalLayout.itemSize = itemSize
         Gallery.sharedInstance.horizontalLayout.minimumScaleFactor = scaleFactor
+        Gallery.sharedInstance.horizontalLayout.inifiniteScroll = Gallery.sharedInstance.shouldScrollInfinite
+        Gallery.sharedInstance.horizontalLayout.scaleElements = Gallery.sharedInstance.shouldScale
     }
     
     private func configureGallery(){

@@ -23,12 +23,12 @@ class ViewController: UIViewController {
     }
     
     func configureGallery() {
-        galleryCollectionView.setGallery(forLayout: .vertical, minLineSpacing: 10, itemSize: CGSize(width: 200, height:200), minScaleFactor: 0.5)
-        galleryCollectionView.setGallery(forLayout: .horizontal, minLineSpacing: 20, itemSize: CGSize(width: 300, height:300), minScaleFactor: 0.5)
+       // galleryCollectionView.setGallery(forLayout: .vertical, minLineSpacing: 10, itemSize: CGSize(width: 200, height:200), minScaleFactor: 0.5)
+       // galleryCollectionView.setGallery(forLayout: .horizontal, minLineSpacing: 20, itemSize: CGSize(width: 300, height:300), minScaleFactor: 0.5)
 
-        galleryCollectionView.setGalleryWithCustomFlows(andStyle: .autoDynamic)
-        
-        //galleryCollectionView.setGallery(withStyle: .autoDynamic, minLineSpacing: 10, itemSize: CGSize(width: 200, height: 200),minScaleFactor:0.2)
+       // galleryCollectionView.setGalleryWithCustomFlows(andStyle: .autoDynamic)
+        galleryCollectionView.setGaleryBehavior(forInfiniteScroll: false, andScalingElemnts: false)
+        galleryCollectionView.setGallery(withStyle: .autoDynamic, minLineSpacing: 10, itemSize: CGSize(width: 200, height: 200),minScaleFactor:0.6)
     }
     
     override func willRotate(to toInterfaceOrientation: UIInterfaceOrientation, duration: TimeInterval) {
