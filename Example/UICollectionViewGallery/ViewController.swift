@@ -32,12 +32,8 @@ class ViewController: UIViewController {
     }
     
     override func willRotate(to toInterfaceOrientation: UIInterfaceOrientation, duration: TimeInterval) {
-        switch toInterfaceOrientation {
-        case .landscapeLeft,.landscapeRight:
         galleryCollectionView.changeOrientation()
-        case .portrait,.portraitUpsideDown,.unknown:
-            galleryCollectionView.changeOrientation()
-        }
+
     }
 }
 //
