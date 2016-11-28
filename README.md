@@ -63,7 +63,12 @@ For `infinite scroll` and `.autoDynamic` style support, you have to handle prope
         galleryCollectionView.changeOrientation()
     }
 ```
-
+### Aditional methods
+You can find the indexPath for the center element by using the fallowing UICollectionView extension public property `centerCellIndexPath`
+```swift
+galleryCollectionView.centerCellIndexPath
+```
+which retunrs an optional indexPath for the center element of the CollectionView
 
 ## Example
 
