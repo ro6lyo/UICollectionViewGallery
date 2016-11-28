@@ -59,13 +59,8 @@ For `infinite scroll` and `.autoDynamic` style support, you have to handle prope
 ```
 
 ```swift
- override func willRotate(to toInterfaceOrientation: UIInterfaceOrientation, duration: TimeInterval) {
-        switch toInterfaceOrientation {
-        case .landscapeLeft,.landscapeRight:
+  override func willRotate(to toInterfaceOrientation: UIInterfaceOrientation, duration: TimeInterval) {
         galleryCollectionView.changeOrientation()
-        case .portrait,.portraitUpsideDown,.unknown:
-            galleryCollectionView.changeOrientation()
-        }
     }
 ```
 
