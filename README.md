@@ -7,10 +7,9 @@
 [![Platform](https://img.shields.io/cocoapods/p/UICollectionViewGallery.svg?style=flat)](http://cocoapods.org/pods/UICollectionViewGallery)
 ## Demo
 ### Vertical Infinite Scroll Layout
-![Gif](https://github.com/ro6lyo/assets/blob/master/scrollVertical.gif)
-
+![Gif](http://i.giphy.com/l0Hlzlqj7rWyXgYFO.gif)
 ### Horizontal Infinite Scroll Layout
-![Gif](https://github.com/ro6lyo/assets/blob/master/scrollHorizontal.gif)
+![Gif](http://i.giphy.com/3oz8xChgUeZLl5NjOM.gif)
 
 
 ## Usage
