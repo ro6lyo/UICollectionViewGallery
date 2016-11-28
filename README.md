@@ -12,6 +12,64 @@
 ### Horizontal Infinite Scroll Layout
 ![Gif](https://github.com/ro6lyo/assets/blob/master/scrollHorizontal.gif)
 
+
+## Usage
+### General initialization 
+UICollectionViewGallery has been implemented as UICollectionView extensions, all public functions are
+accesible thru UICollectionView class instances.So basicly you need an instance of UICollectionView, which
+can be created programaticly or via Storyboard.
+```swift
+import UICollectionViewGallery
+
+...
+    @IBOutlet weak var galleryCollectionView: UICollectionView!
+```
+### Basic usage
+You can setup the basic UICollectionViewGallery with fallowing function and this propertis: `GalleryFlowStyle` which represents the `enum` for different styles, `minLineSpacing` represents space between cells, `itemSize` represents size of the cells, `minScaleFactor` represents scaling factor between the center cell and the rest of the visible cells.
+```swift
+galleryCollectionView.setGallery(withStyle: .autoDynamic, minLineSpacing: 10, itemSize: CGSize(width: 200, height: 200),minScaleFactor:0.6)
+```
+Note that this general approuch sets up the same cell properties for both Vertical and Horizontal flow layouts,howover if you need a more custom approuch you can setup both flow layout seperatly thru the fallowing methods.
+```swift
+galleryCollectionView.setGallery(forLayout: .vertical, minLineSpacing: 10, itemSize: CGSize(width: 200, height:200), minScaleFactor: 0.5)
+galleryCollectionView.setGallery(forLayout: .horizontal, minLineSpacing: 20, itemSize: CGSize(width: 300, height:300), minScaleFactor: 0.8)
+galleryCollectionView.setGalleryWithCustomFlows(andStyle: .autoDynamic)
+```
+### Behavior
+You can disable `infinite scroll` and `scaling` by calling the fallowing function,they are enabled by default.
+```swift
+galleryCollectionView.setGaleryBehavior(forInfiniteScroll: false, andScalingElemnts: false)
+```
+### Supported Styles
+```swift
+public enum GalleryFlowStyle {
+    case vertical         // vertical flow
+    case horizontal       // horizontal flow
+    case autoFixed        // flow based on initial aspeciRatio  eg. height > width = Vertical, 
+                          //                                        heignt < width = Horizontal
+    case autoDynamic      // auto flow based on dynamic aspect ratio: requares orientation change event to be catched   
+}
+```
+### Final Touches
+For `infinite scroll` and `.autoDynamic` style support, you have to handle properly 2 events, and call the appropriate functions.
+```swift
+ func scrollViewDidScroll(_ scrollView: UIScrollView) {
+        galleryCollectionView.recenterIfNeeded()
+    }
+```
+
+```swift
+ override func willRotate(to toInterfaceOrientation: UIInterfaceOrientation, duration: TimeInterval) {
+        switch toInterfaceOrientation {
+        case .landscapeLeft,.landscapeRight:
+        galleryCollectionView.changeOrientation()
+        case .portrait,.portraitUpsideDown,.unknown:
+            galleryCollectionView.changeOrientation()
+        }
+    }
+```
+
+
 ## Example
 
 To run the example project, clone the repo, and run `pod install` from the Example directory first.
