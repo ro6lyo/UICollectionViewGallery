@@ -13,10 +13,12 @@ public enum FlowLayouts {
     case horizontal
 }
 
-public enum OrientationState {
+public enum GalleryFlowStyle {
     case vertical         // vertical flow
     case horizontal       // horizontal flow
-    case autoFixed        // flow based on inital aspecRatio  eg. height > width = Vertical   heignt < withd = Horizontal
+    case autoFixed        // flow based on initial aspeciRatio  eg. height > width = Vertical, 
+                          //                                        heignt < width = Horizontal
+    
     case autoDynamic      // auto flow based on dynamic aspect ratio: requares orientation change event to be catched
     
 }
@@ -33,7 +35,7 @@ open class CustomCollectionViewGallery {
     var itemSize = CGSize(width: 200, height: 200)
     var minimumScaleFactor = 0.5
     
-    var orientation:OrientationState = .autoDynamic
+    var orientation:GalleryFlowStyle = .autoDynamic
     var orintationSupport = false
     
     open var shouldScrollInfinite = true   //  can be changed based on requared behaviour
@@ -49,7 +51,7 @@ extension UICollectionView {
      by calling setGallery(forLayout layout: FlowLayouts,minLineSpacing:CGFloat,itemSize:CGSize,minScaleFactor scaleFactor:CGFloat)
      for both layouts and
      */
-    public func setGallery(withStyle style:OrientationState, minLineSpacing:CGFloat,itemSize:CGSize,minScaleFactor scaleFactor:CGFloat){
+    public func setGallery(withStyle style:GalleryFlowStyle, minLineSpacing:CGFloat,itemSize:CGSize,minScaleFactor scaleFactor:CGFloat){
         
         switch style {
         case .vertical:
@@ -78,7 +80,7 @@ extension UICollectionView {
     /**
      use it only with custom Flows implementations
      */
-    public func setGalleryWithCustomFlows(andStyle style:OrientationState) {
+    public func setGalleryWithCustomFlows(andStyle style:GalleryFlowStyle) {
         Gallery.sharedInstance.orientation = style
         Gallery.sharedInstance.orintationSupport = false
         self.isPagingEnabled = false
@@ -92,10 +94,7 @@ extension UICollectionView {
      */
     public func changeOrientation(){
         guard Gallery.sharedInstance.orintationSupport else {return}
-        
-        print("width is  - >\(self.bounds.size.width)")
-        print("hieght is - >\(self.bounds.size.height)")
-
+    
         if self.collectionViewLayout.isKind(of: VerticalFlowLayout.self) && self.bounds.size.height > self.bounds.size.width {
             UIView.animate(withDuration: 0.2) { () -> Void in
                 self.collectionViewLayout.invalidateLayout()
