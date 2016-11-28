@@ -127,6 +127,8 @@ extension UICollectionView {
         Gallery.sharedInstance.shouldScrollInfinite = shouldScroll
         Gallery.sharedInstance.shouldScale = shouldScale
     }
+
+    
     //
     //MARK:- Private Functions
     //
@@ -173,3 +175,21 @@ extension UICollectionView {
         }
     }
 }
+extension UICollectionView {
+    
+    var centerPoint : CGPoint {
+        
+        get {
+            return CGPoint(x: self.center.x + self.contentOffset.x, y: self.center.y + self.contentOffset.y);
+        }
+    }
+    
+    public var centerCellIndexPath: NSIndexPath? {
+        
+        if let centerIndexPath: NSIndexPath  = self.indexPathForItem(at: self.centerPoint) as NSIndexPath? {
+            return centerIndexPath
+        }
+        return nil
+    }
+}
+

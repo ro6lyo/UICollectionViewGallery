@@ -21,6 +21,7 @@ class ViewController: UIViewController {
         galleryCollectionView.dataSource = self
         configureGallery()
     }
+ 
     
     func configureGallery() {
        // galleryCollectionView.setGallery(forLayout: .vertical, minLineSpacing: 10, itemSize: CGSize(width: 200, height:200), minScaleFactor: 0.5)
@@ -42,16 +43,18 @@ class ViewController: UIViewController {
 extension ViewController: UICollectionViewDataSource, UICollectionViewDelegate {
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return stringArray.count
+
+        return stringArray.count // <-  this is your count of elements
     }
+    
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell: customCell = (collectionView.dequeueReusableCell(withReuseIdentifier: "CollectionCell", for: indexPath as IndexPath) as? customCell)!
         cell.customLabel.text = stringArray[indexPath.row]
-        return cell
+        return cell   //<- this is current item
     }
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        
+        //<-- this is selected items
     }
     
     func scrollViewDidScroll(_ scrollView: UIScrollView) {
