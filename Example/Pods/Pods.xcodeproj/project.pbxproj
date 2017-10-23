@@ -302,11 +302,6 @@
 			attributes = {
 				LastSwiftUpdateCheck = 0830;
 				LastUpgradeCheck = 0900;
-				TargetAttributes = {
-					3B195B6E96BEA96788ADDE8AF05C1467 = {
-						LastSwiftMigration = 0900;
-					};
-				};
 			};
 			buildConfigurationList = 2D8E8EC45A3A1A1D94AE762CB5028504 /* Build configuration list for PBXProject "Pods" */;
 			compatibilityVersion = "Xcode 3.2";
@@ -460,7 +455,38 @@
 			};
 			name = Release;
 		};
-		4C552DCEB2039D1CB9146A404A3ED8FE /* Release */ = {
+		570D8FFC0C2D57AB66AD2D783F37644A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 1A43551C4A5588C4B46391ECA19FB21C /* UICollectionViewGallery.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/UICollectionViewGallery/UICollectionViewGallery-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/UICollectionViewGallery/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/UICollectionViewGallery/UICollectionViewGallery.modulemap";
+				PRODUCT_NAME = UICollectionViewGallery;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		725CC7F9FBFE930B53AC5871C63B0FB9 /* Release */ = {
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 1A43551C4A5588C4B46391ECA19FB21C /* UICollectionViewGallery.xcconfig */;
 			buildSettings = {
@@ -484,7 +510,6 @@
 				SKIP_INSTALL = YES;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
 				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
-				SWIFT_SWIFT3_OBJC_INFERENCE = Default;
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALIDATE_PRODUCT = YES;
@@ -649,38 +674,6 @@
 			};
 			name = Debug;
 		};
-		E5807E854DA1785EF6C770BBBBDF6125 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 1A43551C4A5588C4B46391ECA19FB21C /* UICollectionViewGallery.xcconfig */;
-			buildSettings = {
-				CODE_SIGN_IDENTITY = "";
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				GCC_PREFIX_HEADER = "Target Support Files/UICollectionViewGallery/UICollectionViewGallery-prefix.pch";
-				INFOPLIST_FILE = "Target Support Files/UICollectionViewGallery/Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MODULEMAP_FILE = "Target Support Files/UICollectionViewGallery/UICollectionViewGallery.modulemap";
-				PRODUCT_NAME = UICollectionViewGallery;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
-				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
-				SWIFT_SWIFT3_OBJC_INFERENCE = Default;
-				SWIFT_VERSION = 4.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Debug;
-		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -696,8 +689,8 @@
 		3D0411D27A9861AD914CF3066FE72EE0 /* Build configuration list for PBXNativeTarget "UICollectionViewGallery" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				E5807E854DA1785EF6C770BBBBDF6125 /* Debug */,
-				4C552DCEB2039D1CB9146A404A3ED8FE /* Release */,
+				570D8FFC0C2D57AB66AD2D783F37644A /* Debug */,
+				725CC7F9FBFE930B53AC5871C63B0FB9 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

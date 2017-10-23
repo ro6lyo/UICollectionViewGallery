@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'UICollectionViewGallery'
-  s.version          = '0.1.4'
+  s.version          = '0.1.8'
   s.summary          = 'highly customizable uicollectionview gallery'
 
 # This description is used to generate tags and improve search results.
