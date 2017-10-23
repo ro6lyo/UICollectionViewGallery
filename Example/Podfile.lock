@@ -1,5 +1,5 @@
 PODS:
-  - UICollectionViewGallery (0.1.4)
+  - UICollectionViewGallery (0.1.8)
 
 DEPENDENCIES:
   - UICollectionViewGallery (from `../`)
@@ -9,7 +9,7 @@ EXTERNAL SOURCES:
     :path: ../
 
 SPEC CHECKSUMS:
-  UICollectionViewGallery: 29e0a680cd2152e612e34c891db1e7e79d1d471d
+  UICollectionViewGallery: 4de21f28c52a2edde2f6cc43cea531b7705ecb36
 
 PODFILE CHECKSUM: 4441e589f252e960e88888529ddd7eb1dd28e299
 
