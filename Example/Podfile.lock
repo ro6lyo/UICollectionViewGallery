@@ -1,16 +1,16 @@
 PODS:
-  - UICollectionViewGallery (0.1.3)
+  - UICollectionViewGallery (0.1.4)
 
 DEPENDENCIES:
   - UICollectionViewGallery (from `../`)
 
 EXTERNAL SOURCES:
   UICollectionViewGallery:
-    :path: "../"
+    :path: ../
 
 SPEC CHECKSUMS:
-  UICollectionViewGallery: 5444d9ad0924f31c328f496ecf9342f21b9dee4c
+  UICollectionViewGallery: 29e0a680cd2152e612e34c891db1e7e79d1d471d
 
 PODFILE CHECKSUM: 4441e589f252e960e88888529ddd7eb1dd28e299
 
-COCOAPODS: 1.1.1
+COCOAPODS: 1.3.1
